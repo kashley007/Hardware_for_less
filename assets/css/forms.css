@@ -1,0 +1,100 @@
+
+
+/* error, warning, note, message styling */
+
+.error,
+.warning {
+	background-color: #990000; /* don't change */
+	color: #FFFFFF; /* don't change */
+}
+.note,
+.message,
+.required,
+.error {
+	font-size: 12px;
+	padding: 5px 0 5px 0; /* don't change */
+}
+.error {
+	padding: 5px; /* don't change */
+}
+.required,
+.message {
+	font-weight: normal;
+	margin: 0; /* don't change */
+}
+.required {
+  color: #990000; /* don't change */
+}
+
+input.formButton{
+		background-color:#584B3F;
+		border:1px solid #817365;
+		color:#fff;
+		margin-top:3px;
+		padding:3px 4px 2px 4px;
+}
+
+/* form header / value table cell styling */
+
+.FormTextHeader {
+	background-color: #EBE3D8;
+	text-align: right;  /* don't change */
+	width: 130px; /* don't change */
+}
+.FormValue {
+	width: 210px; /* don't change */
+}
+.FormValue,
+.FormValue_NoWidth
+{
+	border: 1px solid #EBE3D8;
+	padding-right: 2px; /* don't change */
+	text-align: left;  /* don't change */
+}
+.FormTextarea {
+	border: 1px solid #EBE3D8;
+	text-align: left;  /* don't change */
+	width: 340px; /* don't change */
+}
+
+
+/* input / textarea styles */
+
+.shortInput {
+}
+.mediumInput {
+	width: 208px; /* don't change */
+}
+.longInput {
+	width: 340px; /* don't change */
+}
+.FormTextarea textarea {
+	width: 340px; /* don't change */
+}
+
+.mediumInput,
+.FormValue input,
+.FormValue select,
+.FormTextarea textarea {
+	background-color: #FFF;
+	border: 1px solid #D9CBB6;
+}
+
+.FormValue input.requiredField,
+.FormValue select.requiredField,
+.FormValue textarea.requiredField,
+.FormTextarea textarea.requiredField {
+	background-color: #FCC; /* don't change */
+	border: 1px solid #990000; /* don't change */
+}
+
+
+/* form button styling */
+
+input.formButton {
+	background-color: #EBE3D8;
+	border: 1px solid #D9CBB6;
+	font-size: 12px;
+	padding: 2px; /* don't change */
+}
+

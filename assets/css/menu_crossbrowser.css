@@ -1,0 +1,192 @@
+/* ================================================================ 
+This copyright notice must be kept untouched in the stylesheet at 
+all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.stunicholls.com/menu/pro_dropdown_3.html
+Copyright (c) 2005-2007 Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+span.fa.fa-bars.nav_text {
+	color: #000;
+	font-size: 30px;
+	margin-top: 2px;
+}
+#bottom_nav {
+	bottom:-3px;
+	clear:both;
+	min-height:40px;
+	overflow:visible;
+	padding: 0; 
+	z-index: 400;
+	width: 100%;
+}
+#bottom_nav ul{
+	overflow:visible;
+}
+
+#bottom_nav li.top {
+	cursor: pointer;
+	display: block;
+	float: left;
+	height: 37px;
+	margin: 0;
+	padding: 0px 10px 0;
+	position: relative;
+	top: 0;
+	vertical-align: middle;
+}
+
+#bottom_nav li a.top_link {
+	color: #6daa99;
+	cursor: pointer;
+	display: block; 
+	float: left;
+	font-size:14px;
+	margin: 0;
+	padding: 10px 0 11px;
+	position:relative;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+#bottom_nav li:hover a.top_link, #bottom_nav li.selected a.top_link {
+	background: url(../images/nav-bottom-border.jpg) left 29px repeat-x;
+	color: #fff;
+}
+
+/* Default list styling */
+
+#bottom_nav li:hover, #bottom_nav li.selected {
+	
+	position:relative; 
+	z-index: 400;
+}
+
+#bottom_nav li:hover ul.sub
+{
+	
+	border: 0;
+	height:auto; 
+	left:0; 
+	top: 39px;
+	white-space:nowrap; 
+	width: auto;
+	max-width:299px;
+	z-index: 400;
+}
+#bottom_nav li:hover ul.sub li
+{
+	background-color: #405A67;
+	display:block; 
+	font-weight:normal;
+	line-height: 12px; 
+	margin: 0;
+	position:relative; 
+	width: 100%; 
+}
+#bottom_nav li:hover ul.sub li a
+{
+	border-right: 1px solid #5C7F93;
+	border-top: 1px solid #5C7F93;
+	color: #fff; 
+	display:block; 
+	font-size:14px;
+	margin: 0; 
+	min-width:100px;  
+	padding: 10px; 
+	text-align: left; 
+	text-decoration: none; 
+	z-index:700;
+}
+
+#bottom_nav li:hover ul.sub li a:hover 
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+#bottom_nav li:hover li:hover ul,
+#bottom_nav li:hover li:hover li:hover ul,
+#bottom_nav li:hover li:hover li:hover li:hover ul,
+#bottom_nav li:hover li:hover li:hover li:hover li:hover ul
+{
+	height:auto;
+	left: 100%; 
+	top: 0; 
+	white-space:nowrap; 
+	width:auto;
+	z-index:400; 
+}
+
+#bottom_nav ul, 
+#bottom_nav li:hover ul ul,
+#bottom_nav li:hover li:hover ul ul,
+#bottom_nav li:hover li:hover li:hover ul ul,
+#bottom_nav li:hover li:hover li:hover li:hover ul ul
+{
+	height:0; 
+	left:-9999px; 
+	list-style:none;
+	margin:0; 
+	padding:0; 
+	position:absolute; 
+	top:-9999px; 
+	width:0; 
+}
+
+#bottom_nav li:hover li:hover a.fly,
+#bottom_nav li:hover li:hover li:hover a.fly,
+#bottom_nav li:hover li:hover li:hover li:hover a.fly,
+#bottom_nav li:hover li:hover li:hover li:hover li:hover a.fly
+{
+/*
+	background:#3f96a9 url(arrow_over.gif) 80px 6px no-repeat; 
+*/
+	border-color:#fff;
+	color:#3A2F1E; 
+} 
+
+#bottom_nav li:hover li:hover li a.fly,
+#bottom_nav li:hover li:hover li:hover li a.fly,
+#bottom_nav li:hover li:hover li:hover li:hover li a.fly
+{
+/*
+	background:#50b5d0 url(arrow.gif) 80px 6px no-repeat; 
+	border-color:#50b5d0;
+*/
+	color:#000; 
+} 
+
+#bottom_nav li a#mSelected {
+	color: #B32121;  
+}
+#bottom_nav li:hover a#mSelected {
+	color: #EE7F04;  
+}
+
+#bottom_nav #selected_nav a.top_link{
+		color:#ffffff;
+	}
+
+#bottom_nav_toggle{
+	text-align: right;
+}
+#bottom_nav_toggle {
+	font-size: 19px;
+    color: #FFF;
+    padding: 4px 0;
+}
+	#bottom_nav_toggle a{
+		color: #FFF;
+		cursor: pointer;
+    	font-style: italic;
+    	margin-right: 15px;
+    	text-decoration: none;
+	}
+	#bottom_nav_toggle i{
+		color: #FFF;
+		font-size: 14px;
+		margin-left: 10px;
+	}

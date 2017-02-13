@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hardware for Less | Hardware For Less</title>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" /> 
+	    <meta name="msvalidate.01" content="AE6E5CAC3A04714EDB419F2D91ACCB2B" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/vnd.microsoft.icon" /> 
+	    <link rel="icon" href="./assets/images/favicon.ico" type="image/ico" /> 
+	    <link href='https://fonts.googleapis.com/css?family=Crimson+Text:700italic,400,700,400italic' rel='stylesheet' type='text/css'>
+	    <meta name="description" content="Hardware for Less"/>
+	    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	    <meta name="robots" content="index,follow"/>
+	    <meta name="google-site-verification" content="AHpWAkqqMarjE_CcLzWXFCzmMOe-Nqv16UEZbmlNyO4" />
+	    
+	    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+	    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+	    <link href="./assets/css/styles.css" rel="stylesheet" type="text/css" /> 
+    	<link href="./assets/css/styles.css" rel="stylesheet" media="print" type="text/css" />
+    	<link rel="stylesheet" type="text/css" href="http://www.hardwareforless.com/styles/jquery.jqzoom.css"/>
+    	<link rel="stylesheet" type="text/css" href="./assets/bootstrap/css/bootstrap.min.css"/>
+    	<link href="./assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    	
+    	<script type="text/javascript" src="./assets/jquery/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="./assets/jquery/jquery_ui/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="./assets/bootstrap/js/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="http://www.hardwareforless.com//js/jquery.singlePageNav.min.js"></script> 
+	    <script type="text/javascript" src="https://www.hardwareforless.com/coolproductsgroup/scripts/jquery.divslideshow-1.2.js"></script>
+    	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+                <script type="text/javascript" src="./assets/js/jquery.cycle.min.js"></script>
+                <script src="./assets/slidesjs/source/jquery.slides.min.js"></script>
+                <script type="text/javascript">
+
+                    $(document).ready(function(e) {
+
+                        $('#slideshow').slidesjs({
+                            
+                            height: 300,
+                            navigation: {
+      							active: true,
+        						effect: "fade"
+    						},
+    						pagination: {
+      							active: true,
+      							effect: "fade"
+    						},
+    						effect: {
+						      fade: {
+						        speed: 1000,
+						          // [number] Speed in milliseconds of the fade animation.
+						        crossfade: true
+						          // [boolean] Cross-fade the transition.
+						      	}
+						    },
+						    play: {
+						      active: false,
+						        // [boolean] Generate the play and stop buttons.
+						        // You cannot use your own buttons. Sorry.
+						      effect: "fade",
+						        // [string] Can be either "slide" or "fade".
+						      interval: 5000,
+						        // [number] Time spent on each slide in milliseconds.
+						      auto: true,
+						        // [boolean] Start playing the slideshow on load.
+						      swap: true,
+						        // [boolean] show/hide stop and play buttons
+						      pauseOnHover: true,
+						        // [boolean] pause a playing slideshow on hover
+						      restartDelay: 0
+						        // [number] restart delay on inactive slideshow
+						    },
+						    callback: {
+						      loaded: function(number) {
+						        var color = $("#slideshow").find(".slide").eq(0).find("p").andSelf().filter("p:first").first().text();
+                                if($('#slideshow_container').attr('class') != 'undefined') {
+                                    $('#slideshow_container').removeAttr('class').addClass(color);
+                                }else {
+                                    $('#slideshow_container').addClass(color);
+                                }
+						      },
+						      start: function(number) {
+						        var color = $("#slideshow").find(".slide").eq(number).find("p").andSelf().filter("p:first").first().text();
+                                if($('#slideshow_container').attr('class') != 'undefined') {
+                                    $('#slideshow_container').removeAttr('class').addClass(color);
+                                }else {
+                                    $('#slideshow_container').addClass(color);
+                                }
+						      },
+						      complete: function(number) {
+						       
+						      }
+						    }
+                        });
+                    });
+                </script>
+	</head>
+	<body style="background-color:#3F3F3F">
+		<div id="header" class="container">
+			<div id="header_top" class="row">
+	            <div class="wrapper">
+	            	<nav id="nav" class="col-xs-2 col-sm-6 col-md-8">
+	            		<div id="nav_icon">
+							<a href="" id="nav_button"><span class="fa fa-bars nav_text"></span></a>
+						</div>
+		            	<ul id="top_nav" class="topnav">
+		                	<li><a href="http://www.hardwareforless.com">Home</a></li>
+		    				<li><a href="http://www.hardwareforless.com/page/company">Company</a></li>
+		                    <li><a href="http://www.hardwareforless.com/page/shipping">Shipping &amp; Returns</a></li>
+		                    <li><a href="http://www.hardwareforless.com/users/manager">My Account</a></li>
+		                    <li><a href="http://www.hardwareforless.com/page/contact">Contact Us</a></li>
+		                    <li><a href="http://www.hardwareforless.com/page/search">Search</a></li>
+		                    <li><a href="http://www.hardwareforless.com/shopping/ordersearch">Order Status</a></li>
+		                </ul>
+		            </nav>
+		            <div class="col-xs-10 col-sm-6 col-md-4">
+	                	<div id="header_search"> 
+		                    <!-- search box -->
+		                    <script type="text/javascript">
+		                        function searchForm(){
+		                        	var sText = document.forms["searchbox"]["string"].value;
+		                        	if(sText.length > 1){
+		                        		var sText = sText.replace("#","%23");
+		                        		window.location = "http://www.hardwareforless.com/search/string/" + sText;
+		                        		return false;
+		                        	}else{
+		                        		return false;
+		                        	}
+		                        }
+		                    </script>
+		                    <div id="search_wrapper">
+		                        <form name="searchbox" action="http://www.hardwareforless.com/search" method="get" class="nomargins" onsubmit="return searchForm();">
+		                        	<input class="search" type="text" name="string" value="Search by name or item number..." maxlength="80" onfocus="searchbox.string.value= '';" />
+		                        	<input class="submit" type="submit" value=">" onclick="return searchForm();" />
+		                        </form>
+		                    </div>
+		                </div>
+		            </div>
+            	</div>
+            </div>
+            <div id="header_middle" class="row">
+            	<div class="wrapper">
+	        		<div id="header_logo" class="col=xs-12 col-sm-6">
+	                    <a href="http://www.hardwareforless.com">
+	                        <img src="http://www.hardwareforless.com//images/header-logo.jpg" alt="Liberty Hardware for Less" title="Liberty Hardware for Less" class="img-responsive" />
+	                    </a>
+	                </div>
+	                <div id="header_cart_info" class="col-xs-12 col-sm-6">
+	                	<div id="contact">Contact Us 1.855.680.2943</div> 
+	                    <div id="cart_info">0 Items 
+	                    | $0.00 
+	                    | <a href="http://www.hardwareforless.com/shopping/basket">View Cart</a></div>
+	                </div>
+	            </div>
+            </div>
+            <div id="header_bottom" class="row">
+            	<div class="wrapper">
+            		<div id="bottom_nav_toggle">
+		                 <a id="bottom_nav_dropdown">Product Categories<i class="fa fa-caret-down" aria-hidden="true"></i></span></a>
+		            </div>
+	            	<ul id="bottom_nav">
+	                    <li><span>Shop By Brands</span>
+	                     	<ul class="sub">
+	                        	<li>
+	                                <a href='http://www.hardwareforless.com/search/brand/Best Value'>Best Value</a>
+	                            </li>
+	                        	<li>
+	                                <a href='http://www.hardwareforless.com/search/brand/Brainerd'>Brainerd</a>
+	                            </li>
+	                        	<li>
+	                                <a href='http://www.hardwareforless.com/search/brand/Delta'>Delta</a>
+	                            </li>
+	                        	<li>
+	                                <a href='http://www.hardwareforless.com/search/brand/Franklin Brass'>Franklin Brass</a>
+	                            </li>
+	                        	<li>
+	                                <a href='http://www.hardwareforless.com/search/brand/Liberty Hardware'>Liberty Hardware</a>
+	                            </li>
+	                        	<li>
+	                                <a href='http://www.hardwareforless.com/search/brand/Motiv'>Motiv</a>
+	                            </li>
+	                        	<li>
+	                                <a href='http://www.hardwareforless.com/search/brand/Peerless'>Peerless</a>
+	                            </li>
+	                        	<li>
+	                                <a href='http://www.hardwareforless.com/search/brand/Project Basics'>Project Basics</a>
+	                            </li>
+	                        	<li>
+	                                <a href='http://www.hardwareforless.com/search/brand/Safety First'>Safety First</a>
+	                            </li>
+	                        	<li>
+	                                <a href='http://www.hardwareforless.com/search/brand/Vortex'>Vortex</a>
+	                            </li>
+	                        </ul>
+	                    </li>
+	                    <li>
+	                        <a href="http://www.hardwareforless.com/search/hardware/bath-hardware" >Bath Hardware</a>
+	                    </li> 
+	                    <li>
+	                        <a href="http://www.hardwareforless.com/search/hardware/knobs" >Cabinet Knobs</a>
+	                    </li>
+	                    <li>
+	                        <a href="http://www.hardwareforless.com/search/hardware/pulls" >Drawer Pulls</a>
+	                    </li>
+	                    <li>
+	                        <a href="http://www.hardwareforless.com/search/hardware/functional-hardware" >Functional Hardware</a>
+	                    </li>
+	                    <li>
+	                        <a href="http://www.hardwareforless.com/search/hardware/bath-safety" >Bath Safety</a>
+	                    </li>
+	                    <li>
+	                        <a href="http://www.hardwareforless.com/search/hardware/backplates" >Backplates</a>
+	                    </li>
+	                    <li>
+	                        <a href="http://www.hardwareforless.com/search/hardware/wall-plates" >Wall Plates</a>
+	                    </li>
+	                </ul>
+            	</div>
+            </div>
+		</div>
+		<div id="page" class="container">
+			<div id="slideshow_row" class="row">
+		        <div id="slideshow_container">
+		        	<div class="wrapper">
+			            <div id="home_slideshow">
+			                <div id="slideshow" class="slides">
+			                    <div class="slide">
+			                    	<p style="position:absolute; top:-9999px; left:0;">bath</p>
+			                    	<div class="col-xs-12 col-sm-6 slide_info">
+				                        <p class="slide_caption">A bathroom should complement the style throughout your home and Liberty's extensive line of bath hardware can inspire the designer in us all. From robe hooks and towel bars to soap dishes, our hardware will bring your bathroom retreat to life. <br />
+				                        <a href="http://www.hardwareforless.com/search/hardware/bath-hardware" class="slide_button">Shop All Bath Hardware</a></p>
+			                    	</div>
+			                    	<div class="col-xs-12 col-sm-6 slide_img">
+			                        	<img class="img-responsive" src="./assets/images/slides/slideshow-bath.png" alt="Bathroom" />
+			                    	</div>
+			                    </div>
+			                    <div class="slide">
+			                    	<p style="position:absolute; top:-9999px; left:0;">hooks</p>
+			                        <div class="col-xs-12 col-sm-6 slide_info">
+				                        <p class="slide_caption">Every coat needs a hook to call home and with Liberty's beautiful selection of hooks and hook rails you can make your coats home compliment your style.
+				                        Whether you are looking for wall hooks, hook rails, over the door hooks, or key hooks, we have the selection to match your home.<br />
+				                        <a href="http://www.hardwareforless.com/search/hardware/functional-hardware/hardware/hooks" class="slide_button">Shop All Hooks</a> </p>
+			                    	</div>
+			                    	<div class="col-xs-12 col-sm-6 slide_img">
+			                        	<img class="img-responsive" src="./assets/images/slides/slideshow-hooks.png" alt="Hooks" />
+			                        </div>
+			                    </div>
+			                    <div class="slide">
+			                    	<p style="position:absolute; top:-9999px; left:0;">plates</p>
+			                        <div class="col-xs-12 col-sm-6 slide_info">
+				                        <p class="slide_caption">Why use boring standard wall plates when you can add beauty and sophistication to your home by upgrading to decorative wall plates?
+				                        With Liberty's and Brainerd's extensive selection of wall plates, switch plates, duplexes, and decorators, you are sure to find a refreshing design to match your needs. <br />
+				                        <a href="http://www.hardwareforless.com/search/hardware/wall-plates" class="slide_button">Shop All Wall Plates</a></p>
+			                    	</div>
+			                    	<div class="col-xs-12 col-sm-6 slide_img">
+			                        	<img class="img-responsive" src="./assets/images/slides/slideshow-wallplates.png" alt="Wall Plates" />
+			                    	</div>
+			                    </div>
+			                    <div class="slide">
+			                    	<p style="position:absolute; top:-9999px; left:0;">hinges</p>
+			                        <div class="col-xs-12 col-sm-6 slide_info">
+				                        <p class="slide_caption">It does not matter if you are looking for a decorative hinge, invisible hinge or a pocket hinge, with the huge selection of hinge's that Liberty Hardware has to offer, you are bound to find a style that fits your needs.<br />
+				                        <a href="http://www.hardwareforless.com/search/hardware/functional-hardware/hardware/hinges" class="slide_button">Shop All Hinges</a>
+				                        </p>
+			                    	</div>
+			                    	<div class="col-xs-12 col-sm-6 slide_img">
+				                        <img class="img-responsive" src="./assets/images/slides/slideshow-hinges.png" alt="Hinges" />
+			                    	</div>
+			                    </div>
+			                    <div class="slide">
+			                    	<p style="position:absolute; top:-9999px; left:0;">pulls</p>
+			                        <div class="col-xs-12 col-sm-6 slide_info">
+				                        <p class="slide_caption">Revive the heart of your home with stunning cabinet hardware from Liberty Hardware.
+				                        Whether your kitchen is high traffic or high style, we have the casual, modern and traditional knobs and pulls that will make your kitchen cabinets an expression of your unique personality. <br />
+				                        <a href="http://www.hardwareforless.com/search/hardware/pulls" class="slide_button">Shop All Pulls</a></p>
+			                    	</div>
+			                    	<div class="col-xs-12 col-sm-6 slide_img">
+				                        <img class="img-responsive" src="./assets/images/slides/slideshow-knobs-pulls.png" alt="Pulls" />
+			                    	</div>
+			                    </div>
+			                </div>
+			            </div>
+		        	</div>
+		        </div>
+		    </div>
+		    <div id="shop_by_hardware" class="row">
+		    	<div class="wrapper">
+	                <div id="hardware_toggle" class="shop_by col-xs-12 col-sm-3">
+	                    shop by
+	                    <div class="large_font">HARDWARE<span class="shopby_dropdown"><a><i id="hardware_drop" class="fa fa-caret-down" aria-hidden="true"></i></a></span></div>
+	                </div>
+	                <div id="hardware_products" class="col-xs-12 col-sm-9">
+		                <div class="hardware col-xs-4 col-sm-2">
+		                    <a href="http://www.hardwareforless.com/search/hardware/knobs"><img class="img-responsive" src="http://www.hardwareforless.com/images/cabinet-hardware.png" alt="cabinets" title="cabinets"/><br />Cabinet Knobs</a>
+		                </div>
+		                <div class="hardware col-xs-4 col-sm-2">
+		                    <a href="http://www.hardwareforless.com/search/hardware/bath-hardware"><img class="img-responsive" src="http://www.hardwareforless.com/images/bath-hardware.png" alt="bath hardware" title="Bath hardware"/><br />Bath Hardware</a>
+		                </div>
+		                <div class="hardware col-xs-4 col-sm-2">
+		                    <a href="http://www.hardwareforless.com/search/hardware/pulls"><img class="img-responsive" src="http://www.hardwareforless.com/images/pull-hardware.png" alt="Pull Hardware" title="Pull Hardware" /><br />Drawer Pulls</a>
+		                </div>
+		                <div class="hardware col-xs-4 col-sm-2">
+		                    <a href="http://www.hardwareforless.com/search/hardware/functional-hardware"><img class="img-responsive" src="http://www.hardwareforless.com/images/hooks-hardware.png" alt="hooks" title="hooks" /><br />Functional Hardware</a>
+		                </div>
+		                <div class="hardware col-xs-4 col-sm-2">
+		                    <a href="http://www.hardwareforless.com/search/hardware/functional-hardware/hardware/hinges"><img class="img-responsive" src="http://www.hardwareforless.com/images/hinges-thumbnail.png" alt="hooks" title="hooks" /><br />Hinges</a>
+		                </div>
+		                <div class="hardware col-xs-4 col-sm-2">
+		                    <a href="http://www.hardwareforless.com/search/hardware/wall-plates"><img class="img-responsive" src="http://www.hardwareforless.com/images/wallplate-hardware.png" alt="wall plates" title="wall plates" /><br />Wall Plates</a>
+		                </div>
+	                </div>
+		        </div>
+        	</div>
+        	<div id="shop_by_collections" class="row">
+	            <div class="shop_by_container">
+	            	<div class="wrapper">
+		                <div id="collection_toggle" class="shop_by col-xs-12 col-sm-3">
+		                    shop by
+		                    <div class="large_font">COLLECTION<span class="shopby_dropdown"><a><i id="collection_drop" class="fa fa-caret-down" aria-hidden="true"></i></span></a></div>
+		                </div>
+		                <div id="collection_products" class="col-xs-12 col-sm-9">
+			                <div class="collection col-xs-4 col-sm-2">
+			                    <a href="http://www.hardwareforless.com/search/collection/athens"><img class="img-responsive" src="http://www.hardwareforless.com/images/athens-collection.png" alt="Athens" title="Athens" /><br />Athens</a>
+			                </div>
+			                <div class="collection col-xs-4 col-sm-2">
+			                    <a href="http://www.hardwareforless.com/search/collection/barcelona"><img class="img-responsive" src="http://www.hardwareforless.com/images/barcelona-collection.png" alt="barcelona" title="barcelona" /><br />Barcelona</a>
+			                </div>
+			                <div class="collection col-xs-4 col-sm-2">
+			                    <a href="http://www.hardwareforless.com/search/collection/contempo-ii"><img class="img-responsive" src="http://www.hardwareforless.com/images/contempo-collection.png" alt="contempo" title="contempo" /><br />Contempo II</a>
+			                </div>
+			                <div class="collection col-xs-4 col-sm-2">
+			                    <a href="http://www.hardwareforless.com/search/collection/kentworth"><img class="img-responsive" src="http://www.hardwareforless.com/images/kentworth-collection.png" alt="kentworth" title="kentworth" /><br />Kentworth</a>
+			                </div>
+			                <div class="collection col-xs-4 col-sm-2">
+			                    <a href="http://www.hardwareforless.com/search/collection/palladium-ii"><img class="img-responsive" src="http://www.hardwareforless.com/images/palladium-collection.png" alt="palladium" title="palladium" /><br />Palladium II</a>
+			                </div>
+			                <div class="collection col-xs-4 col-sm-2">
+			                    <a href="http://www.hardwareforless.com/search/collection/southampton"><img class="img-responsive" src="http://www.hardwareforless.com/images/southhampton-collection.png" alt="Southhampton" title="Southhampton" /><br />Southampton</a>
+			                </div>
+			            </div>
+		            </div>
+            	</div>
+        	</div>
+        	<div id="shop_by_brands" class="row">
+            	<div class="shop_by_container">
+	            	<div class="wrapper">
+		                <div id="brand_toggle" class="shop_by col-xs-12 col-sm-3">
+		                    shop by
+		                    <div class="large_font">BRANDS<span class="shopby_dropdown"><a><i id="brand_drop" class="fa fa-caret-down" aria-hidden="true"></i></a></span></div>
+		                </div>
+		                <div id="brand_container" class="col-xs-12 col-sm-9">
+		                	<div class="row">
+			                	<div class="brand col-xs-6 col-sm-4 col-md-3">
+			                		<a href="http://www.hardwareforless.com/search/brand/liberty-hardware"><img class="img-responsive" src="./assets/images/liberty.jpg" alt="liberty" title="Liberty" /></a>
+			                	</div>
+			                	<div class="brand col-xs-6 col-sm-4 col-md-3">
+			                		<a href="http://www.hardwareforless.com/search/brand/delta"><img class="img-responsive" src="./assets/images/Delta.jpg" alt="Delta" title="Delta" /></a>
+			                	</div>
+			                	<div class="brand col-xs-6 col-sm-4 col-md-3">
+			                		<a href="http://www.hardwareforless.com/search/brand/brainerd"><img class="img-responsive" src="./assets/images/brainerd.jpg" alt="Brainerd" title="Brainerd" /></a>
+			                	</div>
+			                	<div class="brand col-xs-6 col-sm-4 col-md-3">
+			                		<a href="http://www.hardwareforless.com/search/brand/franklin-brass"><img class="img-responsive" src="./assets/images/franklin.jpg" alt="franklinbrass" title="Franklinbrass" /></a>
+			                	</div>
+			                	<div class="brand col-xs-6 col-sm-4 col-md-3">
+			                		<a href="http://www.hardwareforless.com/search/brand/safety-first"><img class="img-responsive" src="./assets/images/safety.jpg" alt="safetyfirst" title="SafetyFirst" /></a>
+			                	</div>
+			                	<div class="brand col-xs-6 col-sm-4 col-md-3">
+			                		<a href="http://www.hardwareforless.com/search/brand/peerless"><img class="img-responsive" src="./assets/images/peerless.jpg" alt="peerless" title="Peerless" /></a>
+			                	</div>
+			                	<div class="brand col-xs-6 col-sm-4 col-md-3">
+			                		<a href="http://www.hardwareforless.com/search/brand/vortex"><img class="img-responsive" src="./assets/images/vortex.jpg" alt="vortex" title="Vortex" /></a>
+			                	</div>
+			                	<div class="brand col-xs-6 col-sm-4 col-md-3">
+			                		<a href="http://www.hardwareforless.com/search/brand/best-value"><img class="img-responsive" src="./assets/images/bestvalue.jpg" alt="bestvalue" title="BestValue" /></a>
+			                	</div>
+		                	</div>
+		                </div>
+		            </div>
+	            </div>
+        	</div>
+        	<div id="footer" class="row">
+        		<div id="footer_container">
+        			<ul id="footer_nav">
+		            	<ll ><a href="http://www.hardwareforless.com">Home</a></li>
+		                <ll ><a href="http://www.hardwareforless.com/page/company">company</a></li>
+		                <ll ><a href="http://www.hardwareforless.com/page/shipping">shipping &amp; returns</a></li>
+		                <ll ><a href="http://www.hardwareforless.com/users/account">my account</a></li>
+		                <ll ><a href="http://www.hardwareforless.com/page/contact">contact us</a></li>
+		                <ll ><a href="http://www.hardwareforless.com/page/search">search</a></li>
+		                <ll ><a href="http://www.hardwareforless.com/shopping/ordersearch">order status</a></li>
+		            </ul>
+		            <div class="" id="footer_copy">&copy; 2017 HardwareforLess.com all rights reserved.<br>HardwareforLess.com is an authorized reseller of Liberty&reg; Products</div>
+		            <div class="" id="footer_icons">
+		                <span id="bbb">
+		                    <a title="LibertyForLess.com BBB Business Review" href="http://www.bbb.org/western-virginia/business-reviews/knobs/libertyforless-com-in-martinsville-va-90007706/#bbbonlineclick"><img alt="LibertyForLess.com BBB Business Review" style="border: 0;" src="https://seal-vawest.bbb.org/seals/blue-seal-96-50-libertyforless-com-90007706.png" /></a>
+		                </span>
+		                <span id="mcafee">
+
+		                     <!-- McAfee Secure Trustmark for libertyhardwareforless.com -->
+							<a target="_blank" href="https://www2.mcafeesecure.com/verify?host=libertyhardwareforless.com"><img class="mfes-trustmark" border="0" src="//cdn.ywxi.net/meter/libertyhardwareforless.com/55.gif" width="65" height="37" title="McAfee SECURE sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" alt="McAfee SECURE sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" oncontextmenu="alert('Copying Prohibited by Law - McAfee Secure is a Trademark of McAfee, Inc.'); return false;"></a>
+							<!-- End McAfee Secure Trustmark -->
+		                </span>
+		    		</div>
+        		</div>
+        	</div>
+    	</div>
+
+
+
+		<script>
+        /* <![CDATA[ */   
+        	var dataLayer = [];
+    	/* ]]> */
+    	</script>
+    	<a id="top"></a>
+
+		
+		
+	    <script type="text/javascript" src="https://www.hardwareforless.com/coolproductsgroup/scripts/jquery.hoverIntent.minified.js"></script>
+	    <script type="text/javascript" src="https://www.hardwareforless.com/coolproductsgroup/scripts/pngFix/pluginpage.js"></script>
+	    <script type="text/javascript" src="https://www.hardwareforless.com/coolproductsgroup/scripts/pngFix/jquery.pngFix.pack.js"></script>
+	    <script type="text/javascript" src="https://www.hardwareforless.com/coolproductsgroup//includes/qforms/lib/qforms.js"></script>
+	    <script type="text/javascript">
+	    	<!--//
+	    	// set the path to the qForms directory
+	    	qFormAPI.setLibraryPath("https://www.hardwareforless.com/coolproductsgroup//includes/qforms/lib/");
+	    	// this loads all the default libraries
+	    	qFormAPI.include("*");
+	    	// load the "Bits" add-on library
+	    	qFormAPI.include("bits");
+	        
+	        //Test float fields to make sure they are proper floats (allows negative numbers)
+	        function __IsNumericfloat(){
+	            
+	            // For foreign currencies, change the decimal to a comma on the next line:
+	            var ValidChars = "01213456789.-";
+	            var IsNumber = true;
+	            var Char ;
+	            var sText = this.value;
+	            var numDecimals = 0;
+
+	            for (i = 0; i < sText.length && IsNumber == true; i++){
+	                Char = sText.charAt(i);
+	                if (ValidChars.indexOf(Char) == -1){
+	                    IsNumber = false;
+	                }
+	                //Checks for minus sign
+	                if (Char == '-' && i > 0){
+	                    IsNumber = false;
+	                }
+	                //Checks to make sure there is only 1 decimal point in the number
+	                // For foreign currencies, change the decimal to a comma on the next line:
+	                if (Char == '.'){
+	                    numDecimals = numDecimals + 1;
+	                }
+	            }
+
+	            if (numDecimals > 1 || IsNumber == false){
+	                this.error = "The field " +
+	                this.description + " does not contain a valid number";
+	            }
+	        }
+
+	        _addValidator("IsNumericfloat",__IsNumericfloat);
+
+	        function __QuantityMult(num) {
+	            // Check to make sure a product quantity being ordered is a multiple of a specfic value
+	            if( this.value % num != 0) {
+	                // error message
+	                this.error = "The " + this.description + " field must";
+	                this.error += " be a multiple of " + num;
+	            }
+	        }
+	      
+	        _addValidator("isQuantityMult", __QuantityMult);
+	        //-->
+	    </script>
+	    <script type="text/javascript">
+	    	$(document).ready(function () {
+	    		
+	    		if ($(window).width() < 768) { 
+      					
+  					$('.slidesjs-container').height(470);
+
+  					//Handling of shop by dropdown menus
+
+  					$("#hardware_toggle").on("click",function(){
+						
+					    if($( "#collection_products" ).is( ":visible" )){
+					    	$("#collection_products").toggle("slow");
+					    	$('#collection_drop').toggleClass('fa-rotate-180');
+					    }
+					    if($( "#brand_container" ).is( ":visible" )){
+					    	$("#brand_container").toggle("slow");
+					    	$('#brand_drop').toggleClass('fa-rotate-180');
+					    }
+					    $("#hardware_products").toggle("slow");
+					    $('#hardware_drop').toggleClass('fa-rotate-180');
+					    $('html, body').animate({
+					        scrollTop: $("#hardware_toggle").offset().top
+					    }, 100);
+					});
+					$("#collection_toggle").on("click",function(){
+					    
+					    if($( "#hardware_products" ).is( ":visible" )){
+					    	$("#hardware_products").toggle("slow");
+					    	$('#hardware_drop').toggleClass('fa-rotate-180');
+					    }
+					    if($( "#brand_container" ).is( ":visible" )){
+					    	$("#brand_container").toggle("slow");
+					    	$('#brand_drop').toggleClass('fa-rotate-180');
+					    }
+					    $("#collection_products").toggle("slow");
+					    $('#collection_drop').toggleClass('fa-rotate-180');
+					    $('html, body').animate({
+					        scrollTop: $("#collection_toggle").offset().top
+					    }, 100)
+					});
+					$("#brand_toggle").on("click",function(){
+					    
+					    if($( "#hardware_products" ).is( ":visible" )){
+					    	$("#hardware_products").toggle("slow");
+					    	$('#hardware_drop').toggleClass('fa-rotate-180');
+					    }
+					    if($( "#collection_products" ).is( ":visible" )){
+					    	$("#collection_products").toggle("slow");
+					    	$('#collection_drop').toggleClass('fa-rotate-180');
+					    }
+					    $("#brand_container").toggle("slow");
+					    $('#brand_drop').toggleClass('fa-rotate-180');
+					    $('html, body').animate({
+					        scrollTop: $("#brand_toggle").offset().top
+					    }, 100)
+					});
+
+					// Product Categories Dropdown menu
+
+					$("#bottom_nav_dropdown").on("click",function(){
+						console.log($('#header_bottom').height());
+						if($('#header_bottom').height() > 40){
+							$('#header_bottom').animate({height:40},1000);
+						}else{
+							$('#header_bottom').animate({height:420},1000);
+						}
+
+						$("#bottom_nav").toggle("slow");
+					});
+  				}
+			    $(window).resize(function() {
+			        var win = $(this); //this = window
+			        $('#header_bottom').height(40);
+      				if (win.width() < 768) {
+      					$('#bottom_nav').css('display', 'none'); 
+      					$('.slidesjs-container').height(470);
+      					if($( "#hardware_products" ).is( ":visible" )){
+      						$('#hardware_products').css('display', 'none');
+      					}
+      					if($( "#collection_products" ).is( ":visible" )){
+      						$('#collection_products').css('display', 'none');
+      					}
+      					if($( "#brand_container" ).is( ":visible" )){
+      						$('#brand_container').css('display', 'none');
+      					}
+      				}
+      				if (win.width() > 768){
+      					$('#bottom_nav').css('display', 'inline');
+      					if($( "#hardware_products" ).is( ":hidden" )){
+      						$('#hardware_products').css('display', 'inline');
+      					}
+      					if($( "#collection_products" ).is( ":hidden" )){
+      						$('#collection_products').css('display', 'inline');
+      					}
+      					if($( "#brand_container" ).is( ":hidden" )){
+      						$('#brand_container').css('display', 'inline');
+      					}
+      				}
+			    });
+			});
+	    </script>
+	    <script type="text/javascript" src="https://www.hardwareforless.com/coolproductsgroup/js/general.js"></script>
+	    <script type="text/javascript" src="https://www.hardwareforless.com/coolproductsgroup//includes/keepalive.js"></script>
+	    
+	</body>
+</html>

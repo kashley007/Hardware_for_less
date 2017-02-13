@@ -1,0 +1,222 @@
+/****** Shopping cart and checkout style ******/
+
+#checkout_basket{
+	padding-bottom:35px;
+}
+
+#page_container{
+	background-color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	min-height:600px; 
+	width:100%;
+}
+	#page_container #page{
+		margin:0 auto;
+		width:100%;
+	}
+	#basket {
+		margin:0 auto;
+		width:100%;
+	}
+
+.carttext td {
+	
+	padding-right:5px;
+}
+.carttext{
+	text-align:right;
+}
+.product_td{
+	width:875px;
+}
+
+.formtable tbody{
+	background-color:#fff;
+}
+.form_fieldName{
+	width:165px;
+}
+#editform .form_fieldName{
+	width:165px;
+}
+#editform table.formtext{
+	margin:0;
+}
+
+.formtext td.required{
+	background-color:#990000;
+	margin:0;
+	padding:0;
+	width:1px;
+}
+.formtext th.formbg{
+	background-color:#233740;
+	padding:4px 0 2px 0;
+}
+
+.formtable td.required{
+	background-color:#990000;
+}
+.formtitle{
+	font-weight:bold;
+	text-align:left;
+}
+.form_fieldValue{
+	float:left;
+	width:292px;
+}
+	.form_fieldValue .formfield{
+		width:213px;
+	}
+
+
+.formerror {
+	color:#917534;
+	font-weight:bold;
+}
+
+.formtext td.required, span.required {
+	background-color: #A3292E;
+	border: 0;
+	margin: 0 5px 0 0;
+	padding: 0;
+	width: 1px;
+}
+
+div.formInput {
+clear: both;
+}
+
+span.formLabel {
+	display: block;
+	float: left;
+	height: 18px;
+	padding: 0 3px 5px 3px;
+	text-align: right;
+	width: 120px;
+}
+span.formLabel2{
+	margin-right:8px;
+}
+
+.account_change_button{
+}
+
+.formbg .price{
+	padding: 0 0 0 10px;
+}
+.order_basket .formtext,
+.order_basket .rightAlign,
+.order_basket .price{
+	text-align:right;
+}
+.order_basket .centerAlign{
+	text-align:center;
+}
+
+.formTable #editform .formtext td.form_fieldValue,
+.formTable #editform .formtext td table.formtext tr {
+	position:relative;
+	left:-75px;
+}
+
+.order_basket .item{
+	padding:5px 30px 5px 0;
+}
+.order_basket .price{
+	padding: 0 5px;
+}
+
+
+.view_options{
+	float:right;
+	background: #8D7233; 
+	border: 1px solid #9E7F38;
+	padding: 4px 4px 2px 4px;
+	color: #fff;
+	height: 17px;
+	position:relative;
+	left:-8px;
+	top:-2px;
+	width: 80px;
+	margin-top:11px;
+	font: -webkit-small-control;
+	font-size: 12px;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	display: inline-block;
+	text-align:center;
+	z-index:500;
+}
+
+#create_account {
+	border-right: 1px solid #CAC9C9;
+	float: left;
+	margin-top: 5px;
+	padding-right: 10px;
+	width: 370px;
+}
+#sign_in {
+float: left;
+margin: 5px 0 0 60px;
+width: 250px;
+}
+#sign_in span.accountField{
+		display:block;
+	}
+		#sign_in span.accountField{
+			display:block;
+			height:21px;
+			margin-bottom:3px ;
+		}
+		#sign_in span.accountField .formfieldlogin{
+			width:135px;
+		}
+	
+		#sign_in span.accountField label{
+			float:left;
+			padding-top:1px;
+		}
+		
+		
+		#sign_in span.accountField input{
+			float:right;
+		}
+		#sign_in span.accountField label.password{
+			display:block;
+		
+		}
+		input.formButton {
+	background-color: #EBE3D8;
+	border: 1px solid #D9CBB6;
+	font-size: 12px;
+	padding: 2px; /* don't change */
+} 
+
+#sign_in div input.formbutton,
+	div input.formbutton{
+
+		
+}
+
+/* related products */
+.related_row{
+	clear:both;
+}
+	.related_product{
+		float:left;
+		text-align:center;
+		width:48%;
+	}
+	
+.thinline{
+	display:none;
+}
+#emptyCellwidth{
+	width:38px;
+}
+
+

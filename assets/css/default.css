@@ -1,0 +1,131 @@
+/* Code for making a full height layout */
+{
+	padding: 0;
+	margin: 0;
+}
+html, body {
+	height: 100%;
+	width: 100%
+}
+/* fixes IE6 */
+* html #container {
+	height: 100%;
+}
+#container {
+	min-height: 100%;
+}
+/* end full height layout code */
+
+/*@font-face {
+    font-family: "AGarmond";
+    src: url(../font/AGaramondPro-Regular.otf) format("opentype");
+
+}*/
+body {
+	background-color:#5C1010;
+	color:#233740;
+	font-family: 'AGarmond', serif;
+}
+
+div, table, tr, th, td, form, img {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	position: relative; /* fixes issue in IE6 when headers some times disappear */
+}
+
+/* header styles */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'AGarmond', serif;
+	margin: 15px 0 15px 0;
+	padding: 0;
+}
+h1 {
+	border-bottom: 1px solid #22373F;
+	font-size:24px;
+	color:#22373F;
+}
+h1.page{
+	padding: 0 0 10px 15px;
+}
+#page_container h1.page{
+	margin:0 0 20px 0;
+	padding:10px 0 0 0;
+}
+
+h2 {
+	color:#7D6450;
+}
+h3 {
+	color:#000;
+}
+h4 {
+	color:#22373F;
+}
+h5 {
+	color:#7D6450;
+}
+h6 {
+	color:#000;
+}
+
+/* a styles */
+
+a {
+	color:#22363D;
+	text-decoration: none;
+}
+a:hover {
+	color:#2B444D;
+}
+a:focus {
+	color:#34525D;
+}
+a:active {
+	color:#2B444D;
+}
+a img {
+	border:none;
+}
+/* p styles */
+
+p {
+	margin:10px 0;
+}
+
+/* hr styles */
+
+hr {
+}
+
+/* list styles */
+
+ul, ol {
+	margin-left: 30px;
+	padding: 10px 10px 10px 0;
+}
+li {
+}
+
+#menu_trail h1,
+.menu_trail h1{
+	color:#414143;
+	border:none;
+	display:inline;
+	font-size:99%;
+}
+#menu_trail a,
+.menu_trail a {
+	color: #414143;
+}
+#menu_trail,
+span.menu_trail{
+	color:#85C441;
+	position:relative;
+	top:-15px;
+} 
+

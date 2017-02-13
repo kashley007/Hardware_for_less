@@ -1,0 +1,232 @@
+
+
+/***************/
+/* page styles */
+/***************/
+
+#page{
+	position:relative;
+	min-height:600px;
+	z-index:0;
+	width: 100%;
+
+}
+#content_bg{
+	background-color:#fff;
+}
+
+/*****************/
+/* header styles */
+/*****************/
+
+#header{
+	background:#fff;
+	border-bottom: 8px solid #fff;
+	position:relative;
+	width:100%;
+	z-index:400;
+}
+	.wrapper{
+		margin:0 auto;
+		max-width:1200px;
+		width: 100%;
+	}
+		#header_container ul{
+			padding:0;
+			margin:0;
+		}
+		#header_top{
+			padding-top:2px;
+			border-bottom: 1px solid #000;
+		}
+			ul#top_nav{
+				float:left;
+				font-family: 'Crimson Text', serif;
+				position:relative;
+				top:2px;
+				padding: 8px 0;
+    			margin-left: 0;
+    			margin-bottom: 0;
+			}
+			ul#top_nav li{
+				
+				float:left;
+				font-weight: bold;
+				font-size:14px;
+				list-style:none; 
+				margin-right:12px;
+				text-transform:uppercase;
+			}
+			ul#top_nav li:last-child{
+				margin-right: 0;
+			}
+				ul#top_nav li a{
+					color:#73929e;
+				}
+				ul#top_nav li a:hover{
+					color:#829EA8;
+				}
+				#header_search{
+					background-color:#fff;
+					border:1px solid #808285;
+					float:right;
+					height:35px;
+					margin-bottom: 2px;
+					padding-left:6px;
+					width:100%;
+					-moz-box-shadow:  inset   0 0 4px 0 #ccc;
+					  -webkit-box-shadow: inset  0 0 4px 0 #ccc;
+					  box-shadow:  inset    0 0 4px 0 #ccc;
+				}
+					#header_search input{
+						border:none;
+						color:#7f9ba5;
+						font-family: 'AGarmond', serif;
+						font-weight: bold;
+						font-size:18px;
+						font-style:italic;
+						height:25px;
+						padding-left:10px;
+					}
+					#header_search .search{
+						width:88%;
+					}
+					#header_search .submit{
+						background:none;
+						color:#7f9ba5;
+						height:35px;
+						position:relative;
+						top:1px;
+						width:10%;
+					}
+						#header_search .submit:hover{
+							cursor:pointer;
+						}
+		#header_middle{
+			
+			margin-bottom: 22px;
+			padding-top:30px;
+		}
+			#header_logo{
+				
+			}
+			#header_cart_info{
+				text-align: right;
+				font-family:"Times New Roman", Times, serif;
+				font-size:19px;
+				position:relative;
+				top:10px;
+				
+			}
+				#contact{
+					color:#4d5759;
+				}
+				#cart_info,
+				#cart_info a{
+					color:#98201f;
+					font-size:16px;
+					font-weight:bold;
+				}
+		#header_bottom{
+			
+			background: linear-gradient(to bottom, #3A5463,#456270);
+			border-top: 2px solid #6D8997;
+    		height: 40px;
+			
+		}
+			#bottom_nav{
+				background:url(../images/nav-divider.jpg) left top 0 no-repeat;
+				font-family: 'Crimson Text', serif;
+				font-size:16px;
+				margin:0 auto;
+				width:100%;
+			}
+			#bottom_nav li{
+				background:url(../images/nav-divider.jpg) 100% 0 no-repeat;
+				float:left;
+				list-style:none;
+			}
+			#bottom_nav li a,
+			#bottom_nav li span{
+				color:#ffffff;
+				display:block;
+				padding: 10px 20px; 
+
+			}
+	
+				#bottom_nav li a:hover{
+					background:url(../images/selected-nav-bg.jpg) repeat-x;
+				}
+			
+				#bottom_nav li ul.sub_nav li{
+					float:none;
+				}
+				#bottom_nav li ul.sub_nav li a{
+					display:none;
+					float:none;
+					left:0;
+					position:absolute;
+					top:0;
+				}
+					#bottom_nav li:hover ul.sub_nav li a{
+						background-color:#594B40;
+						color:#fff;
+						display:block;
+						float:none;
+						position:relative;
+						z-index:100;
+					}
+	
+
+
+/***************/
+/* main styles */
+/***************/
+
+/*****************/
+/* footer styles */
+/*****************/
+
+#footer{
+	background:url(../images/footer-bg-gradient.jpg) repeat-x;
+	color:#fff;
+	font-family: 'Crimson Text', serif;
+	font-size:14px;
+	
+}
+	#footer_container{
+		margin:0 auto;
+		padding: 10px 0 0 0;
+		text-align:center;
+	}
+	#footer_nav{
+		text-transform:uppercase;
+	}
+	#footer a{
+		color:#fff;
+		padding: 0 5px;
+	}
+			#footer a:hover{
+				color:#fff;
+			}
+			
+	#footer_icons{
+		margin-bottom: 20px;
+	}
+		#bbb{
+			background-color:#fff;
+			border: 1px solid #404042;
+			display:inline-block;
+			padding: 4px 0 0 0;
+		}
+		
+		#mcafee{
+			background-color: #fff;
+			border: 1px solid #404042;
+			display: inline-block;
+			height: 40px;
+			padding: 9px 5px 8px 3px;
+			
+		}
+
+	
