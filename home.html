@@ -72,6 +72,7 @@
 						    callback: {
 						      loaded: function(number) {
 						        var color = $("#slideshow").find(".slide").eq(0).find("p").andSelf().filter("p:first").first().text();
+						        
                                 if($('#slideshow_container').attr('class') != 'undefined') {
                                     $('#slideshow_container').removeAttr('class').addClass(color);
                                 }else {
@@ -85,9 +86,14 @@
                                 }else {
                                     $('#slideshow_container').addClass(color);
                                 }
+
+                                if(number == 5){
+						    		var color = $("#slideshow").find(".slide").eq(0).find("p").andSelf().filter("p:first").first().text();
+						    		$('#slideshow_container').addClass(color);
+						    	}
 						      },
 						      complete: function(number) {
-						       
+						    	
 						      }
 						    }
                         });
@@ -155,7 +161,7 @@
             <div id="header_bottom" class="row">
             	<div class="wrapper">
             		<div id="bottom_nav_toggle">
-		                 <a id="bottom_nav_dropdown">Product Categories<i class="fa fa-caret-down" aria-hidden="true"></i></span></a>
+		                 <a id="bottom_nav_dropdown">Product Categories<i id="bnav_drop" class="fa fa-caret-down" aria-hidden="true"></i></span></a>
 		            </div>
 	            	<ul id="bottom_nav">
 	                    <li><span>Shop By Brands</span>
@@ -477,104 +483,133 @@
 	    </script>
 	    <script type="text/javascript">
 	    	$(document).ready(function () {
+	    		var win = $(window); //this = window
+	    		var initial_width = $(window).width();
 	    		
-	    		if ($(window).width() < 768) { 
-      					
-  					$('.slidesjs-container').height(470);
-
-  					//Handling of shop by dropdown menus
-
-  					$("#hardware_toggle").on("click",function(){
-						
-					    if($( "#collection_products" ).is( ":visible" )){
+	    		function animateMenus(){
+	    			$("#hardware_toggle").on("click",function(){
+							
+					    if($( "#collection_products" ).is( ":visible" ) && !$("#collection_products").is(':animated')){
 					    	$("#collection_products").toggle("slow");
 					    	$('#collection_drop').toggleClass('fa-rotate-180');
 					    }
-					    if($( "#brand_container" ).is( ":visible" )){
+					    if($( "#brand_container" ).is( ":visible" ) && !$("#brand_container").is(':animated') ){
 					    	$("#brand_container").toggle("slow");
 					    	$('#brand_drop').toggleClass('fa-rotate-180');
 					    }
-					    $("#hardware_products").toggle("slow");
-					    $('#hardware_drop').toggleClass('fa-rotate-180');
-					    $('html, body').animate({
-					        scrollTop: $("#hardware_toggle").offset().top
-					    }, 100);
+					    if ( !$("#hardware_products").is(':animated') ) {
+					    	$("#hardware_products").toggle("slow");
+						    $('#hardware_drop').toggleClass('fa-rotate-180');
+						    $('html, body').animate({
+						        scrollTop: $("#hardware_toggle").offset().top
+						    }, 100);
+					    }
 					});
 					$("#collection_toggle").on("click",function(){
 					    
-					    if($( "#hardware_products" ).is( ":visible" )){
+					    if($( "#hardware_products" ).is( ":visible" ) && !$("#hardware_products").is(':animated')){
 					    	$("#hardware_products").toggle("slow");
 					    	$('#hardware_drop').toggleClass('fa-rotate-180');
 					    }
-					    if($( "#brand_container" ).is( ":visible" )){
+					    if($( "#brand_container" ).is( ":visible" ) && !$("#brand_container").is(':animated')){
 					    	$("#brand_container").toggle("slow");
 					    	$('#brand_drop').toggleClass('fa-rotate-180');
 					    }
-					    $("#collection_products").toggle("slow");
-					    $('#collection_drop').toggleClass('fa-rotate-180');
-					    $('html, body').animate({
-					        scrollTop: $("#collection_toggle").offset().top
-					    }, 100)
+					    if ( !$("#collection_products").is(':animated') ) {
+					    	$("#collection_products").toggle("slow");
+						    $('#collection_drop').toggleClass('fa-rotate-180');
+						    $('html, body').animate({
+						        scrollTop: $("#collection_toggle").offset().top
+						    }, 100)
+					    }
 					});
 					$("#brand_toggle").on("click",function(){
 					    
-					    if($( "#hardware_products" ).is( ":visible" )){
+					    if($( "#hardware_products" ).is( ":visible" ) && !$("#hardware_products").is(':animated')){
 					    	$("#hardware_products").toggle("slow");
 					    	$('#hardware_drop').toggleClass('fa-rotate-180');
 					    }
-					    if($( "#collection_products" ).is( ":visible" )){
+					    if($( "#collection_products" ).is( ":visible" ) && !$("#collection_products").is(':animated')){
 					    	$("#collection_products").toggle("slow");
 					    	$('#collection_drop').toggleClass('fa-rotate-180');
 					    }
-					    $("#brand_container").toggle("slow");
-					    $('#brand_drop').toggleClass('fa-rotate-180');
-					    $('html, body').animate({
-					        scrollTop: $("#brand_toggle").offset().top
-					    }, 100)
+					    if ( !$("#brand_container").is(':animated') ) {
+					    	$("#brand_container").toggle("slow");
+						    $('#brand_drop').toggleClass('fa-rotate-180');
+						    $('html, body').animate({
+						        scrollTop: $("#brand_toggle").offset().top
+						    }, 100)
+					    }
 					});
 
-					// Product Categories Dropdown menu
-
+					//bottom nav dropdown
 					$("#bottom_nav_dropdown").on("click",function(){
-						console.log($('#header_bottom').height());
-						if($('#header_bottom').height() > 40){
-							$('#header_bottom').animate({height:40},1000);
-						}else{
-							$('#header_bottom').animate({height:420},1000);
-						}
+						
+						if ( !$("#bottom_nav").is(':animated') ) {
+							
+							$("#bottom_nav").toggle("slow");
 
-						$("#bottom_nav").toggle("slow");
+							if($('#header_bottom').height() > 50){
+								$('#header_bottom').animate({height:40},1000);
+							}else{
+								$('#header_bottom').animate({height:420},1000);
+							}
+							$('#bnav_drop').toggleClass('fa-rotate-180');
+						}
 					});
-  				}
-			    $(window).resize(function() {
-			        var win = $(this); //this = window
-			        $('#header_bottom').height(40);
-      				if (win.width() < 768) {
-      					$('#bottom_nav').css('display', 'none'); 
-      					$('.slidesjs-container').height(470);
-      					if($( "#hardware_products" ).is( ":visible" )){
-      						$('#hardware_products').css('display', 'none');
-      					}
-      					if($( "#collection_products" ).is( ":visible" )){
-      						$('#collection_products').css('display', 'none');
-      					}
-      					if($( "#brand_container" ).is( ":visible" )){
-      						$('#brand_container').css('display', 'none');
-      					}
-      				}
-      				if (win.width() > 768){
-      					$('#bottom_nav').css('display', 'inline');
-      					if($( "#hardware_products" ).is( ":hidden" )){
-      						$('#hardware_products').css('display', 'inline');
-      					}
-      					if($( "#collection_products" ).is( ":hidden" )){
-      						$('#collection_products').css('display', 'inline');
-      					}
-      					if($( "#brand_container" ).is( ":hidden" )){
-      						$('#brand_container').css('display', 'inline');
-      					}
-      				}
-			    });
+	    		}
+
+	    		function inAnimateMenus(){
+	    			
+	    			$('#bottom_nav').css('display', 'inline');
+	    			
+	    			if($('#header_bottom').height() > 40){
+	    				$('#header_bottom').animate({height:40},1000);
+					}
+
+  					if($( "#hardware_products" ).is( ":hidden" )){
+  						$('#hardware_products').css('display', 'inline');
+  					}
+  					if($( "#collection_products" ).is( ":hidden" )){
+  						$('#collection_products').css('display', 'inline');
+  					}
+  					if($( "#brand_container" ).is( ":hidden" )){
+  						$('#brand_container').css('display', 'inline');
+  					}
+	    		}
+
+
+
+	    		function checkWidth(){
+
+	    			var window_width = win.width();
+
+
+	    				$('.slidesjs-container').height(470);
+
+	  					if(initial_width >= 768 && window_width < 768){
+	  						animateMenus();
+	  						
+	  					}else if(initial_width <= 768 && window_width <= 768){
+	  						animateMenus();
+	  					}else if(initial_width < 768 && window_width >= 768){
+	  						inAnimateMenus();
+	  					}else{
+	  						inAnimateMenus();
+	  					}
+	  					//Handling of shop by dropdown menus
+
+	  					
+	    			
+	    			
+      				
+	    		}
+	    		
+	    		checkWidth();
+	    		
+			    $(window).resize(checkWidth);
+			       
+			    
 			});
 	    </script>
 	    <script type="text/javascript" src="https://www.hardwareforless.com/coolproductsgroup/js/general.js"></script>
