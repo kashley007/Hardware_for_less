@@ -36,15 +36,18 @@ p.slide_caption{
 	margin-top: 20px;
 }
 @media screen and (max-width: 768px) {
+	#bottom_nav{
+		font-size: 20px;
+	}
+}
+@media screen and (max-width: 768px) {
 	#hardware_products, #collection_products, #brand_container{
 		display: none;
 	}
 	#bottom_nav li{
 		float: none;
 	}
-	#bottom_nav{
-		font-size: 20px;
-	}
+	
 		.sub{
 			height: 100% !important;
 			left: 0 !important;
@@ -67,17 +70,13 @@ p.slide_caption{
 	#header_bottom{
 		display: block;
 	}
-		#bottom_nav{
-			font-size: 12px;
-		}
+		
 		#bottom_nav li a, #bottom_nav li span{
 			padding: 10px 8px;
 		}
 }
 @media screen and (min-width: 740px) {
-	#bottom_nav{
-		font-size: 20px;
-	}
+	
 	#bottom_nav li a, #bottom_nav li span{
 		padding: 10px 8px;
 	}
@@ -86,6 +85,7 @@ p.slide_caption{
 	#bottom_nav{
 		background: url(../images/nav-divider.jpg) left top 0 no-repeat;
 		display: inline;
+		
 	}
 		#bottom_nav li{
 			background: url(../images/nav-divider.jpg) left top 0 no-repeat;
