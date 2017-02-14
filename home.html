@@ -559,7 +559,7 @@
 							if($('#header_bottom').height() > 50){
 								$('#header_bottom').animate({height:40},400);
 							}else{
-								$('#header_bottom').animate({height:710},1000);
+								$('#header_bottom').animate({height:760},1000);
 							}
 							$('#bnav_drop').toggleClass('fa-rotate-180');
 						}
@@ -568,6 +568,11 @@
 
 	    		function inAnimateMenus(){
 	    			
+	    			
+	    			$('#collection_toggle').unbind('click');
+	    			$('#hardware_toggle').unbind('click');
+	    			$('#brand_toggle').unbind('click');
+
 	    			$('#bottom_nav').css('display', 'inline');
 	    			
 	    			if($('#header_bottom').height() > 50){
@@ -599,9 +604,9 @@
 	  						animateMenus();
 	  						
 	  					}else if(initial_width <= 768 && window_width <= 768){
-	  						animateMenus();
+	  						animateMenus();						
 	  					}else if(initial_width < 768 && window_width >= 768){
-	  						inAnimateMenus();
+	  						inAnimateMenus();  						
 	  					}else{
 	  						inAnimateMenus();
 	  					}

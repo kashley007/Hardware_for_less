@@ -11,9 +11,6 @@
 	#bottom_nav li{
 		background: none;
 	}
-	#bottom_nav li a{
-		padding: 6px 20px;
-	}
 #header_logo img{
 	margin: 0 auto;
 }
@@ -58,7 +55,7 @@ p.slide_caption{
 		    padding: 0 !important;
 		}
 		.sub li a{
-			padding: 5px 0 0 50px !important;
+			padding: 5px 0 0 40px !important;
 		}
 }
 @media screen and (min-width: 400px){
@@ -79,7 +76,7 @@ p.slide_caption{
 }
 @media screen and (min-width: 740px) {
 	#bottom_nav{
-		font-size: 13px;
+		font-size: 20px;
 	}
 	#bottom_nav li a, #bottom_nav li span{
 		padding: 10px 8px;
@@ -92,9 +89,6 @@ p.slide_caption{
 	}
 		#bottom_nav li{
 			background: url(../images/nav-divider.jpg) left top 0 no-repeat;
-		}
-		#bottom_nav li a{
-			padding: 10px 20px;
 		}
 	.large_font{
 		font-size: 26px;
@@ -131,6 +125,8 @@ p.slide_caption{
     	margin-right: 10px;
     	margin-top: 0;
 	}
+}
+@media screen and (min-width: 769px){
 	#bottom_nav_toggle{
 		display: none;
 	}
