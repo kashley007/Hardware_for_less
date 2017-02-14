@@ -5,7 +5,14 @@
 	margin-bottom: 10px;
 }
 #bottom_nav{
-		display: none;
+	background: none;
+	display: none;
+}
+	#bottom_nav li{
+		background: none;
+	}
+	#bottom_nav li a{
+		padding: 6px 20px;
 	}
 #header_logo img{
 	margin: 0 auto;
@@ -41,6 +48,18 @@ p.slide_caption{
 	#bottom_nav{
 		font-size: 20px;
 	}
+		.sub{
+			height: 100% !important;
+			left: 0 !important;
+		    position: relative !important;
+		    top: 0 !important;
+		    width: 100% !important;
+		    margin-left: 0 !important;
+		    padding: 0 !important;
+		}
+		.sub li a{
+			padding: 5px 0 0 50px !important;
+		}
 }
 @media screen and (min-width: 400px){
 	#header_search input{
@@ -66,10 +85,17 @@ p.slide_caption{
 		padding: 10px 8px;
 	}
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 766px) {
 	#bottom_nav{
+		background: url(../images/nav-divider.jpg) left top 0 no-repeat;
 		display: inline;
 	}
+		#bottom_nav li{
+			background: url(../images/nav-divider.jpg) left top 0 no-repeat;
+		}
+		#bottom_nav li a{
+			padding: 10px 20px;
+		}
 	.large_font{
 		font-size: 26px;
 	}
