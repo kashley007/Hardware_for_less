@@ -58,7 +58,7 @@
 						        // You cannot use your own buttons. Sorry.
 						      effect: "fade",
 						        // [string] Can be either "slide" or "fade".
-						      interval: 5000,
+						      interval: 6000,
 						        // [number] Time spent on each slide in milliseconds.
 						      auto: true,
 						        // [boolean] Start playing the slideshow on load.
@@ -66,7 +66,7 @@
 						        // [boolean] show/hide stop and play buttons
 						      pauseOnHover: true,
 						        // [boolean] pause a playing slideshow on hover
-						      restartDelay: 0
+						      restartDelay: 100
 						        // [number] restart delay on inactive slideshow
 						    },
 						    callback: {
@@ -104,9 +104,9 @@
 		<div id="header" class="container">
 			<div id="header_top" class="row">
 	            <div class="wrapper">
-	            	<nav id="nav" class="col-xs-2 col-sm-6 col-md-8">
+	            	<nav id="nav">
 	            		<div id="nav_icon">
-							<a href="" id="nav_button"><span class="fa fa-bars nav_text"></span></a>
+							<a id="nav_button"><span class="fa fa-bars nav_text"></span></a>
 						</div>
 		            	<ul id="top_nav" class="topnav">
 		                	<li><a href="http://www.hardwareforless.com">Home</a></li>
@@ -118,29 +118,27 @@
 		                    <li><a href="http://www.hardwareforless.com/shopping/ordersearch">Order Status</a></li>
 		                </ul>
 		            </nav>
-		            <div class="col-xs-10 col-sm-6 col-md-4">
-	                	<div id="header_search"> 
-		                    <!-- search box -->
-		                    <script type="text/javascript">
-		                        function searchForm(){
-		                        	var sText = document.forms["searchbox"]["string"].value;
-		                        	if(sText.length > 1){
-		                        		var sText = sText.replace("#","%23");
-		                        		window.location = "http://www.hardwareforless.com/search/string/" + sText;
-		                        		return false;
-		                        	}else{
-		                        		return false;
-		                        	}
-		                        }
-		                    </script>
-		                    <div id="search_wrapper">
-		                        <form name="searchbox" action="http://www.hardwareforless.com/search" method="get" class="nomargins" onsubmit="return searchForm();">
-		                        	<input class="search" type="text" name="string" value="Search by name or item number..." maxlength="80" onfocus="searchbox.string.value= '';" />
-		                        	<input class="submit" type="submit" value=">" onclick="return searchForm();" />
-		                        </form>
-		                    </div>
-		                </div>
-		            </div>
+                	<div id="header_search"> 
+	                    <!-- search box -->
+	                    <script type="text/javascript">
+	                        function searchForm(){
+	                        	var sText = document.forms["searchbox"]["string"].value;
+	                        	if(sText.length > 1){
+	                        		var sText = sText.replace("#","%23");
+	                        		window.location = "http://www.hardwareforless.com/search/string/" + sText;
+	                        		return false;
+	                        	}else{
+	                        		return false;
+	                        	}
+	                        }
+	                    </script>
+	                    <div id="search_wrapper">
+	                        <form name="searchbox" action="http://www.hardwareforless.com/search" method="get" class="nomargins" onsubmit="return searchForm();">
+	                        	<input class="search" type="text" name="string" value="Search by name or item number..." maxlength="80" onfocus="searchbox.string.value= '';" />
+	                        	<input class="submit" type="submit" value=">" onclick="return searchForm();" />
+	                        </form>
+	                    </div>
+	                </div>
             	</div>
             </div>
             <div id="header_middle" class="row">
@@ -485,15 +483,9 @@
 	    	$(document).ready(function () {
 	    		var win = $(window); //this = window
 	    		var initial_width = $(window).width();
-	    		
-	    		function animateMenus(){
-	    			
-	    			if($('#header_bottom').height() > 50){
-	    				$('#bottom_nav').css('display', 'inline');
-	    			}else{
-	    				$('#bottom_nav').css('display', 'none');
-	    			}
-	    			
+	    		var desktop = false;
+
+	    		function animateShopByMenu(){
 	    			$("#hardware_toggle").on("click",function(){
 							
 					    if($( "#collection_products" ).is( ":visible" ) && !$("#collection_products").is(':animated')){
@@ -502,7 +494,7 @@
 					    }
 					    if($( "#brand_container" ).is( ":visible" ) && !$("#brand_container").is(':animated') ){
 					    	$("#brand_container").toggle(400);
-					    	$('#brand_drop').toggleClass('fa-rotate-180');
+					    	
 					    }
 					    if ( !$("#hardware_products").is(':animated') ) {
 					    	$("#hardware_products").toggle(400);
@@ -548,7 +540,16 @@
 						    }, 100)
 					    }
 					});
+	    		}
 
+	    		function animateCategorieMenu(){
+	    			
+	    			if($('#header_bottom').height() > 50){
+	    				$('#bottom_nav').css('display', 'inline');
+	    			}else{
+	    				$('#bottom_nav').css('display', 'none');
+	    			}
+	    			
 					//bottom nav dropdown
 					$("#bottom_nav_dropdown").on("click",function(){
 						
@@ -566,56 +567,55 @@
 					});
 	    		}
 
-	    		function inAnimateMenus(){
-	    			
-	    			
+	    		function animateNavMenu(){
+	    			$("#nav_button").on("click",function(){
+	    				if ( !$("#top_nav").is(':animated') ) {
+	    					$("#top_nav").toggle(200, "linear");
+	    				}
+	    			});
+	    		}
+
+	    		function inAnimateShopBy(){
 	    			$('#collection_toggle').unbind('click');
 	    			$('#hardware_toggle').unbind('click');
 	    			$('#brand_toggle').unbind('click');
 
+	    			if($( "#hardware_products" ).is( ":hidden" )){
+  						$('#hardware_products').css('display', 'inline');
+  						$('#hardware_drop').toggleClass('fa-rotate-180');
+  					}
+  					if($( "#collection_products" ).is( ":hidden" )){
+  						$('#collection_products').css('display', 'inline');
+  						$('#collection_drop').toggleClass('fa-rotate-180');
+  					}
+  					if($( "#brand_container" ).is( ":hidden" )){
+  						$('#brand_container').css('display', 'inline');
+  						$('#brand_drop').toggleClass('fa-rotate-180');
+  					}
+	    		}
+
+	    		function inAnimateCategorie(){
 	    			$('#bottom_nav').css('display', 'inline');
 	    			
 	    			if($('#header_bottom').height() > 50){
 	    				$('#header_bottom').animate({height:40},1000);
-	    				$('#bnav_drop').toggleClass('fa-rotate-180');
+	    				
+	    				if($('#bnav_drop').hasClass('fa-rotate-180')){
+	    					$('#bnav_drop').toggleClass('fa-rotate-180');
+	    				}
 					}
-
-  					if($( "#hardware_products" ).is( ":hidden" )){
-  						$('#hardware_products').css('display', 'inline');
-  					}
-  					if($( "#collection_products" ).is( ":hidden" )){
-  						$('#collection_products').css('display', 'inline');
-  					}
-  					if($( "#brand_container" ).is( ":hidden" )){
-  						$('#brand_container').css('display', 'inline');
-  					}
 	    		}
-
-
 
 	    		function checkWidth(){
 
 	    			var window_width = win.width();
-	    				if(window_width < 768){
-	    					$('.slidesjs-container').height(470);
-	    				}
-
-	  					if(initial_width >= 768 && window_width < 768){
-	  						animateMenus();
-	  						
-	  					}else if(initial_width <= 768 && window_width <= 768){
-	  						animateMenus();						
-	  					}else if(initial_width <= 768 && window_width >= 768){
-	  						inAnimateMenus();  						
-	  					}else{
-	  						inAnimateMenus();
-	  					}
-	  					//Handling of shop by dropdown menus
-
-	  					
-	    			
-	    			
-      				
+	    			console.log("initial width: " + initial_width + " Current Width: " + window_width + " Desktop: " + desktop);
+    				if(window_width < 768){
+    					$('.slidesjs-container').height(470);
+    				}
+    				if(window_width < 900){
+    					animateNavMenu();
+    				}
 	    		}
 	    		
 	    		checkWidth();

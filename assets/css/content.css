@@ -628,3 +628,87 @@ h1.shopping{
 .fa{
 	color: #000;
 }
+#header_search input{
+	font-size: 14px;
+}
+#header_logo{
+	margin-bottom: 10px;
+}
+#bottom_nav{
+	background: none;
+	display: none;
+}
+	#bottom_nav li{
+		background: none;
+	}
+#header_logo img{
+	margin: 0 auto;
+}
+p.slide_caption{
+	width: 100%;
+}
+#shop_by_hardware, #shop_by_collections, #shop_by_brands{
+	border-top: none;
+}
+	#shop_by_hardware .shop_by{
+		background: none;
+	}
+	#shop_by_collections .shop_by{
+		background: none;
+	}
+	.hardware, .collection {
+		background: none;
+	}
+#slideshow .slide img{
+	margin: 0 auto;
+}
+#footer_icons{
+	margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+	#hardware_products, #collection_products, #brand_container{
+		display: none;
+	}
+	#bottom_nav{
+		font-size: 20px;
+	}
+	#bottom_nav li{
+		float: none;
+	}
+	
+		.sub{
+			height: 100% !important;
+			left: 0 !important;
+		    position: relative !important;
+		    top: 0 !important;
+		    width: 100% !important;
+		    margin-left: 0 !important;
+		    padding: 0 !important;
+		}
+		.sub li a{
+			padding: 5px 0 0 40px !important;
+		}
+	#footer_nav{
+		display: none;
+	}
+	#footer_copy{
+		padding: 6px;
+	}
+}
+@media screen and (max-width: 899px) {
+	#top_nav{
+		background: #456270;
+	}
+		ul#top_nav li{
+			display: block;
+			float: none;
+			font-size: 20px;
+			margin-left: 15px;
+			text-transform: none;
+			font-weight: normal;
+		}
+			ul#top_nav li a{
+				color: #FFF;
+			}
+}

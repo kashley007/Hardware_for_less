@@ -1,66 +1,4 @@
-#header_search input{
-	font-size: 14px;
-}
-#header_logo{
-	margin-bottom: 10px;
-}
-#bottom_nav{
-	background: none;
-	display: none;
-}
-	#bottom_nav li{
-		background: none;
-	}
-#header_logo img{
-	margin: 0 auto;
-}
-p.slide_caption{
-	width: 100%;
-}
-#shop_by_hardware, #shop_by_collections, #shop_by_brands{
-	border-top: none;
-}
-	#shop_by_hardware .shop_by{
-		background: none;
-	}
-	#shop_by_collections .shop_by{
-		background: none;
-	}
-	.hardware, .collection {
-		background: none;
-	}
-#slideshow .slide img{
-	margin: 0 auto;
-}
-#footer_icons{
-	margin-top: 20px;
-}
-@media screen and (max-width: 768px) {
-	#bottom_nav{
-		font-size: 20px;
-	}
-}
-@media screen and (max-width: 768px) {
-	#hardware_products, #collection_products, #brand_container{
-		display: none;
-	}
-	#bottom_nav li{
-		float: none;
-	}
-	
-		.sub{
-			height: 100% !important;
-			left: 0 !important;
-		    position: relative !important;
-		    top: 0 !important;
-		    width: 100% !important;
-		    margin-left: 0 !important;
-		    padding: 0 !important;
-		}
-		.sub li a{
-			padding: 5px 0 0 40px !important;
-		}
-}
+
 @media screen and (min-width: 400px){
 	#header_search input{
 		font-size: 18px;
@@ -78,10 +16,20 @@ p.slide_caption{
 @media screen and (min-width: 740px) {
 	
 	#bottom_nav li a, #bottom_nav li span{
-		padding: 10px 8px;
+		padding: 10px 15px;
 	}
 }
-@media screen and (min-width: 766px) {
+@media screen and (min-width: 600px) {
+	#header_search{
+		width: 56%
+	}
+}
+@media screen and (min-width: 700px) {
+	#header_search{
+		width: 46%
+	}
+}
+@media screen and (min-width: 769px) {
 	#bottom_nav{
 		background: url(../images/nav-divider.jpg) left top 0 no-repeat;
 		display: inline;
@@ -123,7 +71,12 @@ p.slide_caption{
 	#footer_icons{
 		text-align: right;
     	margin-right: 10px;
-    	margin-top: 0;
+    	margin-top: 10px;
+	}
+}
+@media screen and (min-width: 768px){
+	#header_search{
+		width: 46%;
 	}
 }
 @media screen and (min-width: 769px){
@@ -131,7 +84,8 @@ p.slide_caption{
 		display: none;
 	}
 }
-@media screen and (min-width: 870px) {
+
+@media screen and (min-width: 770px) {
 	#header_logo img{
 		margin: 0;
 	}
@@ -139,7 +93,7 @@ p.slide_caption{
 		width: 78%;
 	}
 	#bottom_nav{
-		font-size: 14px;
+		font-size: 12px;
 	}
 	#bottom_nav li a, #bottom_nav li span{
 		padding: 10px 14px;
@@ -147,52 +101,58 @@ p.slide_caption{
 	.large_font{
 		font-size: 28px;
 	}
+	
 }
-@media screen and (max-width: 992px) {
-    ul#top_nav {
-    	padding: 11px 0;
-    }
-    ul#top_nav li {
-    	font-size: 12px; 
-    }
-    #nav li:hover li:hover ul,
-	#nav li:hover li:hover li:hover ul,
-	#nav li:hover li:hover li:hover li:hover ul,
-	#nav li:hover li:hover li:hover li:hover li:hover ul
-	{
-		background:#14699F;
-		height:auto;
-		left: 100%; 
-		overflow:visible;
-		top: 0; 
-		white-space:nowrap; 
-		width:auto;
-		z-index:400; 
-	}
-
-	#nav ul, 
-	#nav li:hover ul ul,
-	#nav li:hover li:hover ul ul,
-	#nav li:hover li:hover li:hover ul ul,
-	#nav li:hover li:hover li:hover li:hover ul ul
-	{ 
-		left:-9999px; 
-		list-style:none;
-		margin:0; 
-		padding:0; 
-		position:absolute; 
-		top:-9999px;
-		height:0;
-		width:0;  
+@media screen and (min-width: 833px) {
+	#bottom_nav{
+		font-size: 13px;
 	}
 }
-
+@media screen and (min-width: 900px) {
+	#bottom_nav{
+		font-size: 14px;
+	}
+	#nav{
+		float: left;
+		padding-left: 15px;
+		width: 68%;
+	}
+	#nav_icon{
+		display: none;
+	}
+	ul#top_nav{
+		display: inline;
+		padding: 14px 0 4px 0;
+		position: relative;
+		top: 0;	
+		left: 0;
+		float: left;
+	}
+		ul#top_nav li{
+			float: left;
+			font-size: 12px;
+		}
+	#header_search{
+		width: 30%;
+		float: right;
+		margin-bottom: 4px;
+		position: relative;
+	}
+		#header_search input {
+			font-size: 16px;
+		}
+}
+@media screen and (min-width: 970px) {
+	#header_search input {
+		font-size: 18px;
+	}
+}
 @media screen and (min-width: 992px) {
 	#nav_icon{
 		display: none;
 	}
 	ul#top_nav {
-    	padding: 10px 0;
+    	padding: 13px 0 4px 0;
     }
     ul#top_nav li {
     	font-size: 13px; 
@@ -210,7 +170,7 @@ p.slide_caption{
 }
 @media screen and (min-width: 1042px) {
 	ul#top_nav {
-    	padding: 8px 0;
+    	padding: 11px 0 4px 0;
     }
     ul#top_nav li {
     	font-size: 14px; 
