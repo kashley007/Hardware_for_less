@@ -29,51 +29,7 @@
 		width: 46%
 	}
 }
-@media screen and (min-width: 769px) {
-	#bottom_nav{
-		background: url(../images/nav-divider.jpg) left top 0 no-repeat;
-		display: inline;
-		
-	}
-		#bottom_nav li{
-			background: url(../images/nav-divider.jpg) left top 0 no-repeat;
-		}
-	.large_font{
-		font-size: 26px;
-	}
-	#shop_by_hardware{
-		border-top: 2px solid #98201F;;
-	}
-	#shop_by_hardware .shop_by{
-		background: url(../images/red-gradient-border.jpg) 100% 0 no-repeat;
-	}
-	#shop_by_collections{
-		border-top: 2px solid #263B43;
-	}
-	#shop_by_collections .shop_by {
-    	background: url(../images/blue-gradient-border.jpg) 100% 0 no-repeat; */
-	}
-	.hardware{
-		background: url(../images/red-gradient-border.jpg) 100% 0 no-repeat;
-	}
-	.collection{
-		background: url(../images/blue-gradient-border.jpg) 100% 0 no-repeat;
-	}
-	#hardware_products, #collection_products, #brand_container{
-		display: inline;
-	}
-	.shopby_dropdown{
-		display: none;
-	}
-	#brand_container{
-		margin-top: 30px;
-	}
-	#footer_icons{
-		text-align: right;
-    	margin-right: 10px;
-    	margin-top: 10px;
-	}
-}
+
 @media screen and (min-width: 768px){
 	#header_search{
 		width: 46%;
@@ -81,6 +37,9 @@
 }
 @media screen and (min-width: 769px){
 	#bottom_nav_toggle{
+		display: none;
+	}
+	.shopby_dropdown{
 		display: none;
 	}
 }
@@ -145,6 +104,51 @@
 @media screen and (min-width: 970px) {
 	#header_search input {
 		font-size: 18px;
+	}
+}
+@media screen and (min-width: 982px) {
+	#bottom_nav{
+		background: url(../images/nav-divider.jpg) left top 0 no-repeat;
+		display: inline;
+		
+	}
+		#bottom_nav li{
+			background: url(../images/nav-divider.jpg) left top 0 no-repeat;
+		}
+	.large_font{
+		font-size: 26px;
+	}
+	#shop_by_hardware{
+		border-top: 2px solid #98201F;;
+	}
+	#shop_by_hardware .shop_by{
+		background: url(../images/red-gradient-border.jpg) 100% 0 no-repeat;
+	}
+	#shop_by_collections{
+		border-top: 2px solid #263B43;
+	}
+	#shop_by_collections .shop_by {
+    	background: url(../images/blue-gradient-border.jpg) 100% 0 no-repeat; */
+	}
+	.hardware{
+		background: url(../images/red-gradient-border.jpg) 100% 0 no-repeat;
+	}
+	.collection{
+		background: url(../images/blue-gradient-border.jpg) 100% 0 no-repeat;
+	}
+	#hardware_products, #collection_products, #brand_container{
+		display: inline;
+	}
+	.shopby_dropdown{
+		display: none;
+	}
+	#brand_container{
+		margin-top: 30px;
+	}
+	#footer_icons{
+		text-align: right;
+    	margin-right: 10px;
+    	margin-top: 10px;
 	}
 }
 @media screen and (min-width: 992px) {

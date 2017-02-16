@@ -27,8 +27,11 @@
 	    <script type="text/javascript" src="http://www.hardwareforless.com//js/jquery.singlePageNav.min.js"></script> 
 	    <script type="text/javascript" src="https://www.hardwareforless.com/coolproductsgroup/scripts/jquery.divslideshow-1.2.js"></script>
     	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-                <script type="text/javascript" src="./assets/js/jquery.cycle.min.js"></script>
-                <script src="./assets/slidesjs/source/jquery.slides.min.js"></script>
+        <script type="text/javascript" src="./assets/js/jquery.cycle.min.js"></script>
+        <script src="./assets/slidesjs/source/jquery.slides.min.js"></script>
+        <script src="./assets/bxSlider/jquery.bxslider.min.js"></script>
+		<!-- bxSlider CSS file -->
+		<link href="./assets/bxSlider/jquery.bxslider.css" rel="stylesheet" />
                 <script type="text/javascript">
 
                     $(document).ready(function(e) {
@@ -64,9 +67,9 @@
 						        // [boolean] Start playing the slideshow on load.
 						      swap: true,
 						        // [boolean] show/hide stop and play buttons
-						      pauseOnHover: true,
+						      pauseOnHover: false,
 						        // [boolean] pause a playing slideshow on hover
-						      restartDelay: 100
+						      restartDelay: 1000
 						        // [number] restart delay on inactive slideshow
 						    },
 						    callback: {
@@ -92,9 +95,12 @@
 						    		$('#slideshow_container').addClass(color);
 						    	}
 						      },
-						      complete: function(number) {
-						    	
-						      }
+						    	complete: function(number) {
+						    		var pluginInstance = $('#slides').data('plugin_slidesjs');
+						            setTimeout(function() {
+						                pluginInstance.play(true);
+						            }, pluginInstance.options.play.interval);
+												    	}
 						    }
                         });
                     });
@@ -288,11 +294,11 @@
 		    </div>
 		    <div id="shop_by_hardware" class="row">
 		    	<div class="wrapper">
-	                <div id="hardware_toggle" class="shop_by col-xs-12 col-sm-3">
+	                <div id="hardware_toggle" class="shop_by col-xs-12 col-sm-12 col-md-3">
 	                    shop by
 	                    <div class="large_font">HARDWARE<span class="shopby_dropdown"><a><i id="hardware_drop" class="fa fa-caret-down" aria-hidden="true"></i></a></span></div>
 	                </div>
-	                <div id="hardware_products" class="col-xs-12 col-sm-9">
+	                <div id="hardware_products" class="col-xs-12 col-sm-12 col-md-9">
 		                <div class="hardware col-xs-4 col-sm-2">
 		                    <a href="http://www.hardwareforless.com/search/hardware/knobs"><img class="img-responsive" src="http://www.hardwareforless.com/images/cabinet-hardware.png" alt="cabinets" title="cabinets"/><br />Cabinet Knobs</a>
 		                </div>
@@ -317,11 +323,11 @@
         	<div id="shop_by_collections" class="row">
 	            <div class="shop_by_container">
 	            	<div class="wrapper">
-		                <div id="collection_toggle" class="shop_by col-xs-12 col-sm-3">
+		                <div id="collection_toggle" class="shop_by col-xs-12 col-sm-12 col-md-3">
 		                    shop by
 		                    <div class="large_font">COLLECTION<span class="shopby_dropdown"><a><i id="collection_drop" class="fa fa-caret-down" aria-hidden="true"></i></span></a></div>
 		                </div>
-		                <div id="collection_products" class="col-xs-12 col-sm-9">
+		                <div id="collection_products" class="col-xs-12 col-sm-12 col-md-9">
 			                <div class="collection col-xs-4 col-sm-2">
 			                    <a href="http://www.hardwareforless.com/search/collection/athens"><img class="img-responsive" src="http://www.hardwareforless.com/images/athens-collection.png" alt="Athens" title="Athens" /><br />Athens</a>
 			                </div>
@@ -347,11 +353,11 @@
         	<div id="shop_by_brands" class="row">
             	<div class="shop_by_container">
 	            	<div class="wrapper">
-		                <div id="brand_toggle" class="shop_by col-xs-12 col-sm-3">
+		                <div id="brand_toggle" class="shop_by col-xs-12 col-sm-12 col-md-3">
 		                    shop by
 		                    <div class="large_font">BRANDS<span class="shopby_dropdown"><a><i id="brand_drop" class="fa fa-caret-down" aria-hidden="true"></i></a></span></div>
 		                </div>
-		                <div id="brand_container" class="col-xs-12 col-sm-9">
+		                <div id="brand_container" class="col-xs-12 col-sm-12 col-md-9">
 		                	<div class="row">
 			                	<div class="brand col-xs-6 col-sm-4 col-md-3">
 			                		<a href="http://www.hardwareforless.com/search/brand/liberty-hardware"><img class="img-responsive" src="./assets/images/liberty.jpg" alt="liberty" title="Liberty" /></a>
@@ -481,7 +487,6 @@
 	    </script>
 	    <script type="text/javascript">
 	    	$(document).ready(function () {
-	    		var win = $(window); //this = window
 	    		var initial_width = $(window).width();
 	    		var desktop = false;
 
@@ -568,9 +573,17 @@
 	    		}
 
 	    		function animateNavMenu(){
+	    			
 	    			$("#nav_button").on("click",function(){
 	    				if ( !$("#top_nav").is(':animated') ) {
 	    					$("#top_nav").toggle(200, "linear");
+
+	    					if($('#top_nav').hasClass('opened')) {
+	    						$("#top_nav").removeClass('opened');
+	    					}else{
+	    						$("#top_nav").addClass('opened');
+	    					}
+	    					
 	    				}
 	    			});
 	    		}
@@ -606,16 +619,43 @@
 					}
 	    		}
 
+	    		function inAnimateNavMenu(){
+	    			
+	    			$('#top_nav').css('display', 'inline');
+	    			
+	    		}
+
 	    		function checkWidth(){
 
-	    			var window_width = win.width();
-	    			console.log("initial width: " + initial_width + " Current Width: " + window_width + " Desktop: " + desktop);
+	    			var window_width = $(window).width();
+	    			
     				if(window_width < 768){
     					$('.slidesjs-container').height(470);
     				}
-    				if(window_width < 900){
+    				if(initial_width < 900 && window_width < 900){
     					animateNavMenu();
     				}
+    				if(initial_width >= 900 && window_width < 900){
+    					$('#top_nav').css('display', '');
+    					animateNavMenu();
+    					initial_width = window_width;
+    				}
+    				if(initial_width < 900 && window_width >= 900){
+    					inAnimateNavMenu();
+    					initial_width = window_width;
+    				}
+    				if(initial_width >= 900 && window_width >= 900){
+    					inAnimateNavMenu();
+    				}
+    				if(window_width > 768){
+    					inAnimateCategorie();
+    					inAnimateShopBy();
+    				}
+    				if(window_width <= 768){
+    					animateCategorieMenu();
+    					animateShopByMenu();
+    				}
+    				
 	    		}
 	    		
 	    		checkWidth();
