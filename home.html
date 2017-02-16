@@ -20,91 +20,6 @@
     	<link rel="stylesheet" type="text/css" href="http://www.hardwareforless.com/styles/jquery.jqzoom.css"/>
     	<link rel="stylesheet" type="text/css" href="./assets/bootstrap/css/bootstrap.min.css"/>
     	<link href="./assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    	
-    	<script type="text/javascript" src="./assets/jquery/jquery-1.11.1.min.js"></script>
-		<script type="text/javascript" src="./assets/jquery/jquery_ui/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="./assets/bootstrap/js/bootstrap.min.js"></script>
-	    <script type="text/javascript" src="http://www.hardwareforless.com//js/jquery.singlePageNav.min.js"></script> 
-	    <script type="text/javascript" src="https://www.hardwareforless.com/coolproductsgroup/scripts/jquery.divslideshow-1.2.js"></script>
-    	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script type="text/javascript" src="./assets/js/jquery.cycle.min.js"></script>
-        <script src="./assets/slidesjs/source/jquery.slides.min.js"></script>
-        <script src="./assets/bxSlider/jquery.bxslider.min.js"></script>
-		<!-- bxSlider CSS file -->
-		<link href="./assets/bxSlider/jquery.bxslider.css" rel="stylesheet" />
-                <script type="text/javascript">
-
-                    $(document).ready(function(e) {
-
-                        $('#slideshow').slidesjs({
-                            
-                            height: 300,
-                            navigation: {
-      							active: true,
-        						effect: "fade"
-    						},
-    						pagination: {
-      							active: true,
-      							effect: "fade"
-    						},
-    						effect: {
-						      fade: {
-						        speed: 1000,
-						          // [number] Speed in milliseconds of the fade animation.
-						        crossfade: true
-						          // [boolean] Cross-fade the transition.
-						      	}
-						    },
-						    play: {
-						      active: false,
-						        // [boolean] Generate the play and stop buttons.
-						        // You cannot use your own buttons. Sorry.
-						      effect: "fade",
-						        // [string] Can be either "slide" or "fade".
-						      interval: 6000,
-						        // [number] Time spent on each slide in milliseconds.
-						      auto: true,
-						        // [boolean] Start playing the slideshow on load.
-						      swap: true,
-						        // [boolean] show/hide stop and play buttons
-						      pauseOnHover: false,
-						        // [boolean] pause a playing slideshow on hover
-						      restartDelay: 1000
-						        // [number] restart delay on inactive slideshow
-						    },
-						    callback: {
-						      loaded: function(number) {
-						        var color = $("#slideshow").find(".slide").eq(0).find("p").andSelf().filter("p:first").first().text();
-						        
-                                if($('#slideshow_container').attr('class') != 'undefined') {
-                                    $('#slideshow_container').removeAttr('class').addClass(color);
-                                }else {
-                                    $('#slideshow_container').addClass(color);
-                                }
-						      },
-						      start: function(number) {
-						        var color = $("#slideshow").find(".slide").eq(number).find("p").andSelf().filter("p:first").first().text();
-                                if($('#slideshow_container').attr('class') != 'undefined') {
-                                    $('#slideshow_container').removeAttr('class').addClass(color);
-                                }else {
-                                    $('#slideshow_container').addClass(color);
-                                }
-
-                                if(number == 5){
-						    		var color = $("#slideshow").find(".slide").eq(0).find("p").andSelf().filter("p:first").first().text();
-						    		$('#slideshow_container').addClass(color);
-						    	}
-						      },
-						    	complete: function(number) {
-						    		var pluginInstance = $('#slides').data('plugin_slidesjs');
-						            setTimeout(function() {
-						                pluginInstance.play(true);
-						            }, pluginInstance.options.play.interval);
-												    	}
-						    }
-                        });
-                    });
-                </script>
 	</head>
 	<body style="background-color:#3F3F3F">
 		<div id="header" class="container">
@@ -232,11 +147,11 @@
 		        <div id="slideshow_container">
 		        	<div class="wrapper">
 			            <div id="home_slideshow">
-			                <div id="slideshow" class="slides">
+			                <div id="slideshow" class="slides" data-cycle-slides="> div" data-cycle-pause-on-hover="true">
 			                    <div class="slide">
 			                    	<p style="position:absolute; top:-9999px; left:0;">bath</p>
 			                    	<div class="col-xs-12 col-sm-6 slide_info">
-				                        <p class="slide_caption">A bathroom should complement the style throughout your home and Liberty's extensive line of bath hardware can inspire the designer in us all. From robe hooks and towel bars to soap dishes, our hardware will bring your bathroom retreat to life. <br />
+				                        <p class="slide_caption">A bathroom should complement the style throughout your home and Liberty's extensive line of bath hardware can inspire the designer in us all. From robe hooks and towel bars to soap dishes, our hardware will bring your bathroom retreat to life. <br />
 				                        <a href="http://www.hardwareforless.com/search/hardware/bath-hardware" class="slide_button">Shop All Bath Hardware</a></p>
 			                    	</div>
 			                    	<div class="col-xs-12 col-sm-6 slide_img">
@@ -296,7 +211,7 @@
 		    	<div class="wrapper">
 	                <div id="hardware_toggle" class="shop_by col-xs-12 col-sm-12 col-md-3">
 	                    shop by
-	                    <div class="large_font">HARDWARE<span class="shopby_dropdown"><a><i id="hardware_drop" class="fa fa-caret-down" aria-hidden="true"></i></a></span></div>
+	                    <div class="large_font">HARDWARE</div>
 	                </div>
 	                <div id="hardware_products" class="col-xs-12 col-sm-12 col-md-9">
 		                <div class="hardware col-xs-4 col-sm-2">
@@ -325,7 +240,7 @@
 	            	<div class="wrapper">
 		                <div id="collection_toggle" class="shop_by col-xs-12 col-sm-12 col-md-3">
 		                    shop by
-		                    <div class="large_font">COLLECTION<span class="shopby_dropdown"><a><i id="collection_drop" class="fa fa-caret-down" aria-hidden="true"></i></span></a></div>
+		                    <div class="large_font">COLLECTION</div>
 		                </div>
 		                <div id="collection_products" class="col-xs-12 col-sm-12 col-md-9">
 			                <div class="collection col-xs-4 col-sm-2">
@@ -355,7 +270,7 @@
 	            	<div class="wrapper">
 		                <div id="brand_toggle" class="shop_by col-xs-12 col-sm-12 col-md-3">
 		                    shop by
-		                    <div class="large_font">BRANDS<span class="shopby_dropdown"><a><i id="brand_drop" class="fa fa-caret-down" aria-hidden="true"></i></a></span></div>
+		                    <div class="large_font">BRANDS</div>
 		                </div>
 		                <div id="brand_container" class="col-xs-12 col-sm-12 col-md-9">
 		                	<div class="row">
@@ -430,6 +345,15 @@
 	    <script type="text/javascript" src="https://www.hardwareforless.com/coolproductsgroup/scripts/pngFix/pluginpage.js"></script>
 	    <script type="text/javascript" src="https://www.hardwareforless.com/coolproductsgroup/scripts/pngFix/jquery.pngFix.pack.js"></script>
 	    <script type="text/javascript" src="https://www.hardwareforless.com/coolproductsgroup//includes/qforms/lib/qforms.js"></script>
+	    <script type="text/javascript" src="./assets/jquery/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="./assets/jquery/jquery_ui/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="./assets/bootstrap/js/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="http://www.hardwareforless.com//js/jquery.singlePageNav.min.js"></script> 
+	    <script type="text/javascript" src="https://www.hardwareforless.com/coolproductsgroup/scripts/jquery.divslideshow-1.2.js"></script>
+    	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript" src="./assets/js/jquery.cycle.min.js"></script>
+        <script type="text/javascript" src="./assets/js/jquery.cycle2.js"></script>
+        <script src="./assets/slidesjs/source/jquery.slides.min.js"></script>
 	    <script type="text/javascript">
 	    	<!--//
 	    	// set the path to the qForms directory
@@ -487,66 +411,9 @@
 	    </script>
 	    <script type="text/javascript">
 	    	$(document).ready(function () {
+	    	
 	    		var initial_width = $(window).width();
-	    		var desktop = false;
-
-	    		function animateShopByMenu(){
-	    			$("#hardware_toggle").on("click",function(){
-							
-					    if($( "#collection_products" ).is( ":visible" ) && !$("#collection_products").is(':animated')){
-					    	$("#collection_products").toggle(400);
-					    	$('#collection_drop').toggleClass('fa-rotate-180');
-					    }
-					    if($( "#brand_container" ).is( ":visible" ) && !$("#brand_container").is(':animated') ){
-					    	$("#brand_container").toggle(400);
-					    	
-					    }
-					    if ( !$("#hardware_products").is(':animated') ) {
-					    	$("#hardware_products").toggle(400);
-						    $('#hardware_drop').toggleClass('fa-rotate-180');
-						    $('html, body').animate({
-						        scrollTop: $("#hardware_toggle").offset().top
-						    }, 100);
-					    }
-					});
-					$("#collection_toggle").on("click",function(){
-					    
-					    if($( "#hardware_products" ).is( ":visible" ) && !$("#hardware_products").is(':animated')){
-					    	$("#hardware_products").toggle(400);
-					    	$('#hardware_drop').toggleClass('fa-rotate-180');
-					    }
-					    if($( "#brand_container" ).is( ":visible" ) && !$("#brand_container").is(':animated')){
-					    	$("#brand_container").toggle(400);
-					    	$('#brand_drop').toggleClass('fa-rotate-180');
-					    }
-					    if ( !$("#collection_products").is(':animated') ) {
-					    	$("#collection_products").toggle(400);
-						    $('#collection_drop').toggleClass('fa-rotate-180');
-						    $('html, body').animate({
-						        scrollTop: $("#collection_toggle").offset().top
-						    }, 100)
-					    }
-					});
-					$("#brand_toggle").on("click",function(){
-					    
-					    if($( "#hardware_products" ).is( ":visible" ) && !$("#hardware_products").is(':animated')){
-					    	$("#hardware_products").toggle(400);
-					    	$('#hardware_drop').toggleClass('fa-rotate-180');
-					    }
-					    if($( "#collection_products" ).is( ":visible" ) && !$("#collection_products").is(':animated')){
-					    	$("#collection_products").toggle(400);
-					    	$('#collection_drop').toggleClass('fa-rotate-180');
-					    }
-					    if ( !$("#brand_container").is(':animated') ) {
-					    	$("#brand_container").toggle(400);
-						    $('#brand_drop').toggleClass('fa-rotate-180');
-						    $('html, body').animate({
-						        scrollTop: $("#brand_toggle").offset().top
-						    }, 100)
-					    }
-					});
-	    		}
-
+	    		
 	    		function animateCategorieMenu(){
 	    			
 	    			if($('#header_bottom').height() > 50){
@@ -582,29 +449,9 @@
 	    						$("#top_nav").removeClass('opened');
 	    					}else{
 	    						$("#top_nav").addClass('opened');
-	    					}
-	    					
+	    					}	
 	    				}
 	    			});
-	    		}
-
-	    		function inAnimateShopBy(){
-	    			$('#collection_toggle').unbind('click');
-	    			$('#hardware_toggle').unbind('click');
-	    			$('#brand_toggle').unbind('click');
-
-	    			if($( "#hardware_products" ).is( ":hidden" )){
-  						$('#hardware_products').css('display', 'inline');
-  						$('#hardware_drop').toggleClass('fa-rotate-180');
-  					}
-  					if($( "#collection_products" ).is( ":hidden" )){
-  						$('#collection_products').css('display', 'inline');
-  						$('#collection_drop').toggleClass('fa-rotate-180');
-  					}
-  					if($( "#brand_container" ).is( ":hidden" )){
-  						$('#brand_container').css('display', 'inline');
-  						$('#brand_drop').toggleClass('fa-rotate-180');
-  					}
 	    		}
 
 	    		function inAnimateCategorie(){
@@ -622,16 +469,12 @@
 	    		function inAnimateNavMenu(){
 	    			
 	    			$('#top_nav').css('display', 'inline');
-	    			
 	    		}
 
 	    		function checkWidth(){
 
 	    			var window_width = $(window).width();
 	    			
-    				if(window_width < 768){
-    					$('.slidesjs-container').height(470);
-    				}
     				if(initial_width < 900 && window_width < 900){
     					animateNavMenu();
     				}
@@ -649,20 +492,44 @@
     				}
     				if(window_width > 768){
     					inAnimateCategorie();
-    					inAnimateShopBy();
     				}
     				if(window_width <= 768){
     					animateCategorieMenu();
-    					animateShopByMenu();
     				}
-    				
+    				if(window_width < 768){
+    					$('#slideshow').height(500);
+    				}
+    				if(window_width >= 768){
+    					$('#slideshow').height(310);
+    				}
 	    		}
 	    		
 	    		checkWidth();
 	    		
 			    $(window).resize(checkWidth);
-			       
-			    
+			     
+				$( '#slideshow' ).on( 'cycle-initialized', function( event, opts ) {
+				    var color = $("#slideshow").find(".slide").eq(0).find("p").andSelf().filter("p:first").first().text();
+                    console.log(color);
+                    if($('#slideshow_container').attr('class') != 'undefined') {
+                        $('#slideshow_container').removeAttr('class').addClass(color);
+                    }else{
+                    	$('#slideshow_container').addClass(color);
+                    }
+				});
+				$( '#slideshow' ).on( 'cycle-before', function( event, opts ) {
+				    var color = $("#slideshow").find(".slide").eq(opts.slideNum).find("p").andSelf().filter("p:first").first().text();
+                    console.log(color);
+                    if($('#slideshow_container').attr('class') != 'undefined') {
+                        $('#slideshow_container').removeAttr('class').addClass(color);
+                    }else{
+                    	$('#slideshow_container').addClass(color);
+                    }
+				});
+				$( '#slideshow' ).cycle({
+					speed: 1000,
+					fx: 'fade',
+				});  
 			});
 	    </script>
 	    <script type="text/javascript" src="https://www.hardwareforless.com/coolproductsgroup/js/general.js"></script>

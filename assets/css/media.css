@@ -10,13 +10,13 @@
 	}
 		
 		#bottom_nav li a, #bottom_nav li span{
-			padding: 10px 8px;
+			padding: 10px 20px;
 		}
 }
 @media screen and (min-width: 740px) {
 	
 	#bottom_nav li a, #bottom_nav li span{
-		padding: 10px 15px;
+		padding: 10px 14px;
 	}
 }
 @media screen and (min-width: 600px) {
@@ -30,9 +30,17 @@
 	}
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 769px){
 	#header_search{
 		width: 46%;
+	}
+	#bottom_nav{
+		font-size: 12px;
+	}
+	#bottom_nav li{
+		background:url(../images/nav-divider.jpg) 100% 0 no-repeat;
+		float:left;
+		list-style:none;
 	}
 }
 @media screen and (min-width: 769px){
@@ -126,6 +134,7 @@
 	}
 	#shop_by_collections{
 		border-top: 2px solid #263B43;
+		background-color: #FFF;
 	}
 	#shop_by_collections .shop_by {
     	background: url(../images/blue-gradient-border.jpg) 100% 0 no-repeat; */
