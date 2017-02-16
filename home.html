@@ -20,6 +20,9 @@
     	<link rel="stylesheet" type="text/css" href="http://www.hardwareforless.com/styles/jquery.jqzoom.css"/>
     	<link rel="stylesheet" type="text/css" href="./assets/bootstrap/css/bootstrap.min.css"/>
     	<link href="./assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    	<script type="text/javascript" src="./assets/jquery/jquery-1.11.1.min.js"></script>
+    	
+        
 	</head>
 	<body style="background-color:#3F3F3F">
 		<div id="header" class="container">
@@ -80,7 +83,7 @@
             <div id="header_bottom" class="row">
             	<div class="wrapper">
             		<div id="bottom_nav_toggle">
-		                 <a id="bottom_nav_dropdown">Product Categories<i id="bnav_drop" class="fa fa-caret-down" aria-hidden="true"></i></span></a>
+		                 <a id="bottom_nav_dropdown">Browse Products<i id="bnav_drop" class="fa fa-caret-down" aria-hidden="true"></i></span></a>
 		            </div>
 	            	<ul id="bottom_nav">
 	                    <li><span>Shop By Brands</span>
@@ -350,10 +353,9 @@
 		<script type="text/javascript" src="./assets/bootstrap/js/bootstrap.min.js"></script>
 	    <script type="text/javascript" src="http://www.hardwareforless.com//js/jquery.singlePageNav.min.js"></script> 
 	    <script type="text/javascript" src="https://www.hardwareforless.com/coolproductsgroup/scripts/jquery.divslideshow-1.2.js"></script>
-    	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    	
         <script type="text/javascript" src="./assets/js/jquery.cycle.min.js"></script>
         <script type="text/javascript" src="./assets/js/jquery.cycle2.js"></script>
-        <script src="./assets/slidesjs/source/jquery.slides.min.js"></script>
 	    <script type="text/javascript">
 	    	<!--//
 	    	// set the path to the qForms directory
@@ -510,7 +512,6 @@
 			     
 				$( '#slideshow' ).on( 'cycle-initialized', function( event, opts ) {
 				    var color = $("#slideshow").find(".slide").eq(0).find("p").andSelf().filter("p:first").first().text();
-                    console.log(color);
                     if($('#slideshow_container').attr('class') != 'undefined') {
                         $('#slideshow_container').removeAttr('class').addClass(color);
                     }else{
@@ -519,7 +520,6 @@
 				});
 				$( '#slideshow' ).on( 'cycle-before', function( event, opts ) {
 				    var color = $("#slideshow").find(".slide").eq(opts.slideNum).find("p").andSelf().filter("p:first").first().text();
-                    console.log(color);
                     if($('#slideshow_container').attr('class') != 'undefined') {
                         $('#slideshow_container').removeAttr('class').addClass(color);
                     }else{

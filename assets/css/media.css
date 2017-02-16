@@ -114,7 +114,7 @@
 		font-size: 18px;
 	}
 }
-@media screen and (min-width: 982px) {
+@media screen and (min-width: 992px) {
 	#bottom_nav{
 		background: url(../images/nav-divider.jpg) left top 0 no-repeat;
 		display: inline;
@@ -138,6 +138,9 @@
 	}
 	#shop_by_collections .shop_by {
     	background: url(../images/blue-gradient-border.jpg) 100% 0 no-repeat; */
+	}
+	#shop_by_brands{
+		border-top: 2px solid #AAA9A9;
 	}
 	.hardware{
 		background: url(../images/red-gradient-border.jpg) 100% 0 no-repeat;
