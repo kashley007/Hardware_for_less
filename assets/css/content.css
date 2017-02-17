@@ -301,6 +301,9 @@ a.slidesjs-next,
 	}
 	.brand.col-xs-6.col-sm-4.col-md-3 {
     	min-height: 100px;
+    	display: flex;
+		justify-content: center; /* align horizontal */
+		align-items: center;
 	}
 	#brand_container{
 		margin: 12px 0;
