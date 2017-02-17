@@ -24,7 +24,7 @@ html, body {
 body {
 	background-color:#5C1010;
 	color:#233740;
-	font-family: 'AGarmond', serif;
+	font-family: 'AGarmond', serif !important;
 }
 
 div, table, tr, th, td, form, img {
@@ -40,13 +40,13 @@ h1, h2, h3, h4, h5, h6, p {
 /* header styles */
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'AGarmond', serif;
-	margin: 15px 0 15px 0;
+	font-family: 'AGarmond', serif !important;
+	margin: 15px 0 15px 0 !important;
 	padding: 0;
 }
 h1 {
 	border-bottom: 1px solid #22373F;
-	font-size:24px;
+	font-size:24px !important;
 	color:#22373F;
 }
 h1.page{
