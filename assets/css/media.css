@@ -29,8 +29,13 @@
 		width: 46%
 	}
 }
-
 @media screen and (min-width: 769px){
+	#bottom_nav_toggle{
+		display: none;
+	}
+	.shopby_dropdown{
+		display: none;
+	}
 	#header_search{
 		width: 46%;
 	}
@@ -41,14 +46,6 @@
 		background:url(../images/nav-divider.jpg) 100% 0 no-repeat;
 		float:left;
 		list-style:none;
-	}
-}
-@media screen and (min-width: 769px){
-	#bottom_nav_toggle{
-		display: none;
-	}
-	.shopby_dropdown{
-		display: none;
 	}
 }
 
@@ -161,6 +158,12 @@
 		text-align: right;
     	margin-right: 10px;
     	margin-top: 10px;
+	}
+	#collection_products, #hardware_products{
+		margin-bottom: 10px;
+	}
+	#hardware_toggle, #collection_toggle{
+		min-height: 128px;
 	}
 }
 @media screen and (min-width: 992px) {
