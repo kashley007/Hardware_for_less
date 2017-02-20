@@ -488,17 +488,18 @@
     				if(initial_width >= 900 && window_width >= 900){
     					inAnimateNavMenu();
     				}
-    				if(window_width > 769){
+    				if(window_width > 784){
+    					$('#bottom_nav').css('display', 'inline');
     					inAnimateCategorie();
     				}
-    				if(window_width <= 769){
+    				if(window_width <= 784){
     					animateCategorieMenu();
     				}
-    				if(window_width <= 753){
+    				if(window_width <= 769){
     					$('#slideshow').height(500);
     				}
-    				if(window_width > 753){
-    					$('#slideshow').height(330);
+    				if(window_width > 769){
+    					$('#slideshow').height(320);
     				}
 	    		}
 	    		
