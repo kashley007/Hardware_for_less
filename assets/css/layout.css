@@ -37,7 +37,7 @@
 		}
 		#header_top{
 			padding-top:2px;
-			border-bottom: 1px solid #000;
+			border-bottom: 1px solid #999999;
 		}
 			ul#top_nav{
 				float:left;
@@ -227,8 +227,8 @@
 			background-color: #fff;
 			border: 1px solid #404042;
 			display: inline-block;
-			height: 40px;
-			padding: 9px 5px 8px 3px;
+			min-height: 46px;	
+    		padding: 11px 10px 6px 0px;
 			
 		}
 

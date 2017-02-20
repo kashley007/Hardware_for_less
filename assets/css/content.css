@@ -227,7 +227,7 @@ a.slidesjs-next,
 		color:#CA9C79;
 	}
 	.hardware.col-xs-4.col-sm-2{
-		
+		padding: 4px;
 	}
 	
 
@@ -669,7 +669,7 @@ p.slide_caption{
 	margin-top: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 784px) {
 	
 	#bottom_nav{
 		font-size: 20px;
@@ -696,6 +696,7 @@ p.slide_caption{
 	#footer_copy{
 		padding: 6px;
 	}
+
 }
 @media screen and (max-width: 899px) {
 	#top_nav{

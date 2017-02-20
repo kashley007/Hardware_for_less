@@ -103,7 +103,7 @@ span.fa.fa-bars.nav_text {
 	}
 
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 785px) {
 	#bottom_nav li:hover a.top_link, #bottom_nav li.selected a.top_link {
 		background: url(../images/nav-bottom-border.jpg) left 29px repeat-x;
 		color: #fff;
