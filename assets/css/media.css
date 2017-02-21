@@ -13,12 +13,7 @@
 			padding: 10px 20px;
 		}
 }
-@media screen and (min-width: 740px) {
-	
-	#bottom_nav li a, #bottom_nav li span{
-		padding: 10px 14px;
-	}
-}
+
 @media screen and (min-width: 600px) {
 	#header_search{
 		width: 56%
@@ -29,10 +24,13 @@
 		width: 46%
 	}
 }
-@media screen and (min-width: 769px){
+@media screen and (min-width: 768px){
 	
 	#header_search{
 		width: 46%;
+	}
+	#slideshow{
+		height: 320px;
 	}	
 }
 
@@ -53,6 +51,9 @@
 	#bottom_nav_toggle{
 		display: none;
 	}
+	#bottom_nav{
+		display: inline;
+	}
 	#bottom_nav li{
 		background:url(../images/nav-divider.jpg) 100% 0 no-repeat;
 		float:left;
@@ -72,6 +73,9 @@
 	}
 }
 @media screen and (min-width: 900px) {
+	#top_nav{
+		display: inline;
+	}
 	#bottom_nav{
 		font-size: 14px;
 	}
@@ -85,21 +89,21 @@
 	}
 	ul#top_nav{
 		display: inline;
+		float: left;
+		left: 0;
 		padding: 14px 0 4px 0;
 		position: relative;
 		top: 0;	
-		left: 0;
-		float: left;
 	}
 		ul#top_nav li{
 			float: left;
 			font-size: 12px;
 		}
 	#header_search{
-		width: 30%;
 		float: right;
 		margin-bottom: 4px;
 		position: relative;
+		width: 30%;
 	}
 		#header_search input {
 			font-size: 16px;
@@ -154,9 +158,9 @@
 		margin-top: 10px;
 	}
 	#footer_icons{
-		text-align: right;
     	margin-right: 10px;
     	margin-top: 10px;
+    	text-align: right;
 	}
 	#collection_products, #hardware_products{
 		margin-bottom: 10px;
@@ -194,7 +198,7 @@
     	font-size: 14px; 
     }
     .large_font{
-		font-size: 32px;
+		font-size: 36px;
 	}
 }
 @media screen and (min-width: 1048px) {

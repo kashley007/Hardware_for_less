@@ -16,6 +16,7 @@ span.fa.fa-bars.nav_text {
 #bottom_nav {
 	bottom:-3px;
 	clear:both;
+	display: none;
 	min-height:40px;
 	overflow:visible;
 	padding: 0; 

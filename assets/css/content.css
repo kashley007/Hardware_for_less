@@ -178,7 +178,9 @@ a.slidesjs-next,
     .slidesjs-pagination li a:hover {
       background-position: 0 -26px
     }
-
+#slideshow{
+	height: 510px;
+}
 #hardware_toggle, #collection_toggle, #brand_toggle{
 	cursor: pointer;
 }
@@ -206,7 +208,6 @@ a.slidesjs-next,
 		background:url(../images/red-gradient-border.jpg)  100% 0 no-repeat ;
 		float:left;
 		min-height:143px;
-		/*padding:16px 0 0 0;*/
 		text-align:center;
 		width:16%;
 	}
@@ -227,7 +228,7 @@ a.slidesjs-next,
 		color:#CA9C79;
 	}
 	.hardware.col-xs-4.col-sm-2{
-		padding: 4px;
+		padding: 0 15px 0 15px;
 	}
 	
 
@@ -241,7 +242,6 @@ a.slidesjs-next,
 		background:url(../images/blue-gradient-border.jpg)  100% 0 no-repeat ;
 		float:left;
 		min-height:143px;
-		/*padding:16px 0 0 0;*/
 		text-align:center;
 		width:150px;
 	}
@@ -249,8 +249,8 @@ a.slidesjs-next,
 			color: #263B43;
 		}
 		.collection img{
-			margin-top:16px;
 			display: inline;
+			margin-top:16px;
 		}
 		.collection:hover{
 			background-color:#ECF2F4;

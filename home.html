@@ -412,7 +412,7 @@
 	    	
 	    		var initial_width = $(window).width();
 	    		
-	    		function animateCategorieMenu(){
+	    		function animateProductsMenu(){
 	    			
 	    			if($('#header_bottom').height() > 50){
 	    				$('#bottom_nav').css('display', 'inline');
@@ -452,7 +452,7 @@
 	    			});
 	    		}
 
-	    		function inAnimateCategorie(){
+	    		function inAnimateProductsMenu(){
 	    			$('#bottom_nav').css('display', 'inline');
 	    			
 	    			if($('#header_bottom').height() > 50){
@@ -469,10 +469,20 @@
 	    			$('#top_nav').css('display', 'inline');
 	    		}
 
-	    		function checkWidth(){
+	    		function viewport() {
+				    var e = window, a = 'inner';
+				    if (!('innerWidth' in window )) {
+				        a = 'client';
+				        e = document.documentElement || document.body;
+				    }
+				    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+				}
 
-	    			var window_width = $(window).width();
+	    		function checkWidth(){
+	    			//true width
+	    			var window_width = viewport().width;
 	    			
+    				
     				if(initial_width < 900 && window_width < 900){
     					animateNavMenu();
     				}
@@ -482,6 +492,7 @@
     					initial_width = window_width;
     				}
     				if(initial_width < 900 && window_width >= 900){
+    					
     					inAnimateNavMenu();
     					initial_width = window_width;
     				}
@@ -490,15 +501,15 @@
     				}
     				if(window_width > 784){
     					$('#bottom_nav').css('display', 'inline');
-    					inAnimateCategorie();
+    					inAnimateProductsMenu();
     				}
     				if(window_width <= 784){
-    					animateCategorieMenu();
+    					animateProductsMenu();
     				}
-    				if(window_width <= 769){
+    				if(window_width < 768){
     					$('#slideshow').height(500);
     				}
-    				if(window_width > 769){
+    				if(window_width >= 768){
     					$('#slideshow').height(320);
     				}
 	    		}
