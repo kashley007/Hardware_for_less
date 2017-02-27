@@ -425,7 +425,7 @@
 						
 						if ( !$("#bottom_nav").is(':animated') ) {
 							
-							$("#bottom_nav").toggle(200, "linear");
+							$("#bottom_nav").slideToggle('fast');
 
 							if($('#header_bottom').height() > 50){
 								$('#header_bottom').animate({height:40},400);
@@ -441,13 +441,7 @@
 	    			
 	    			$("#nav_button").on("click",function(){
 	    				if ( !$("#top_nav").is(':animated') ) {
-	    					$("#top_nav").toggle(200, "linear");
-
-	    					if($('#top_nav').hasClass('opened')) {
-	    						$("#top_nav").removeClass('opened');
-	    					}else{
-	    						$("#top_nav").addClass('opened');
-	    					}	
+	    					$("#top_nav").slideToggle('slow');
 	    				}
 	    			});
 	    		}
@@ -537,6 +531,7 @@
 				$( '#slideshow' ).cycle({
 					speed: 1000,
 					fx: 'fade',
+					log: false
 				});  
 			});
 	    </script>
